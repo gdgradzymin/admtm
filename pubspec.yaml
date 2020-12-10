@@ -1,0 +1,200 @@
+name: admtm_app
+description: A new Flutter application.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  easy_localization: ^2.3.3
+  font_awesome_flutter: ^8.8.1
+  carousel_slider: ^2.3.1
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - lang/
+
+    - images/admtm001.jpg
+    - images/background_dragons.png
+    - images/logo_admtm_white.png
+    - images/fpkmt_logo_small.png
+    - images/logo_admtm2.jpg
+    - images/aboutus_xlaozc3la0.jpg
+    - images/admtm_xk35euui0a.jpg
+    - images/admtm_x234dizoop.jpg
+    - images/admtm_team02v2.jpg
+    - images/cm-funchal.png
+    - images/cm-cdlobos.png
+    - images/logo_adcmad.png
+    - images/logo_ipdj.png
+    - images/logo_sre.jpg
+    - images/portugal-flag.png
+    - images/uk-flag.png
+    - images/admtm_logo.jpg
+    - images/logo_federation.jpg
+    - images/escola01.jpg
+    - images/escola02.jpg
+    - images/dft_logo_small.png
+    - images/classes/mtkidsXace0z.jpg
+    - images/classes/mtkidsXdfa8a.jpg
+    - images/classes/mtkidsX7bbah.jpg
+    - images/classes/mtkidsX3jyb9.jpg
+    - images/classes/mtkidsXtt32a.jpg
+    - images/classes/mtkidsX55afd.jpg
+    - images/classes/mtkidsX67awt.jpg
+    - images/classes/mtkidsX123a4.jpg
+    - images/classes/mtkidsX22opa.jpg
+    - images/classes/mtkidsX452ao.jpg
+    - images/classes/mtkidsX77awf.jpg
+    - images/classes/mtbegX99afd.jpg
+    - images/classes/mtbegX77ada.jpg
+    - images/classes/mtbegX64ajd.jpg
+    - images/classes/mtbegXnau05.jpg
+    - images/classes/mtbegXhup6a.jpg
+    - images/classes/mtbegX88a9a.jpg
+    - images/classes/mtbegX77afo.jpg
+    - images/classes/mtadvX99aad.jpg
+    - images/classes/mtadvX7acdd.jpg
+    - images/classes/mtadv753op.jpg
+    - images/classes/mtadvX66a6a.jpg
+    - images/classes/mtadv223aj.jpg
+    - images/whatismt/whatismt01.jpg
+    - images/whatismt/whatismt02.jpg
+    - images/fightteam/admtm_team01.jpg
+    - images/fightteam/jose_abreu.jpg
+    - images/fightteam/marisol_freitas.jpg
+    - images/fightteam/henrique_ponte.jpg
+    - images/fightteam/antonio_faria.jpg
+    - images/fightteam/fabio_pinto.jpg
+    - images/fightteam/marco_jardim.jpg
+    - images/fightteam/admtm_trainers.jpg
+    - images/fightteam/admtm_ft_x323aa.jpg
+    - images/fightteam/admtm_cert.jpg
+    - images/fightteam/admtm_team02v2.jpg
+    - images/fightteam/admtm_ft_xekmaicpo3.jpg
+    - images/fightteam/admtm_ft_x3la9claam.jpg
+    - images/fightteam/admtm_ft_x43laizzoa.jpg
+    - images/gym001.jpg
+    - images/gym002.jpg
+    - images/gym003.jpg
+    - images/gym004.jpg
+    - images/gym005.jpg
+    - images/gym006.jpg
+    - images/news/fbpage.jpg
+    - images/news/ytpage.jpg
+    - images/shop/shop-ankle-guards01.jpg
+    - images/shop/shop-blouse01.jpg
+    - images/shop/shop-cup01.jpg
+    - images/shop/shop-gloves01.jpg
+    - images/shop/shop-groin-guard01.jpg
+    - images/shop/shop-guards01.jpg
+    - images/shop/shop-hand-wraps01.jpg
+    - images/shop/shop-hoodie01.jpg
+    - images/shop/shop-hoodie02.jpg
+    - images/shop/shop-jumping-rope01.jpg
+    - images/shop/shop-knee-guards01.jpg
+    - images/shop/shop-mouth-guard01.jpg
+    - images/shop/shop-mt-cream01.jpg
+    - images/shop/shop-mt01.jpg
+    - images/shop/shop-mt02.jpg
+    - images/shop/shop-punching-bag01.jpg
+    - images/shop/shop-punching-bag02.jpg
+    - images/shop/shop-shin-guards01.jpg
+    - images/shop/shop-shorts01.jpg
+    - images/shop/shop-sweatpants01.jpg
+    - images/shop/shop-sweatpants02.jpg
+    - images/shop/shop-t-shirt01.jpg
+    - images/shop/shop-t-shirt02.jpg
+    - images/sponsors/aquimadeira.jpg
+    - images/sponsors/class_house.jpg
+    - images/sponsors/logo_4litro.png
+    - images/sponsors/logo_ad_automoveis.jpg
+    - images/sponsors/logo_alberto_oculista.jpg
+    - images/sponsors/logo_atms.png
+    - images/sponsors/logo_auto_piornais.png
+    - images/sponsors/logo_beach_bar.jpg
+    - images/sponsors/logo_bordados_pontg.png
+    - images/sponsors/logo_carbonara.jpg
+    - images/sponsors/logo_cidade_velha.png
+    - images/sponsors/logo_cme.png
+    - images/sponsors/logo_dubai.png
+    - images/sponsors/logo_eoccu.jpg
+    - images/sponsors/logo_green_devis_safari.png
+    - images/sponsors/logo_hotel_eira_do_serrado_ans_spa.png
+    - images/sponsors/logo_luminoso_rainha.jpg
+    - images/sponsors/logo_mimos.jpg
+    - images/sponsors/logo_miro_freitas.jpg
+    - images/sponsors/logo_muscle_power.png
+    - images/sponsors/logo_nico_burger.jpg
+    - images/sponsors/logo_ocean_gardens_hotel.png
+    - images/sponsors/logo_old_town_bar.jpg
+    - images/sponsors/logo_pdf-convert.png
+    - images/sponsors/logo_podio_classico.jpg
+    - images/sponsors/logo_prova_la_pasta.jpg
+    - images/sponsors/logo_rui_bombas.jpg
+    - images/sponsors/logo_snack_bar.jpg
+    - images/sponsors/logo_super_lobos.jpg
+    - images/sponsors/logo_tipografia_natividade.jpg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
