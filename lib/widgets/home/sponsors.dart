@@ -1,3 +1,4 @@
+import 'package:admtm_app/screens/sponsors.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
@@ -50,14 +51,18 @@ class HomeSponsors extends StatelessWidget {
                       fontSize: 14,
                     ),
               ).tr(),
-              Text(
-                value4,
-                style: Theme.of(context).textTheme.bodyText2.copyWith(
-                      color: const Color.fromRGBO(234, 115, 115, 1),
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ).tr(),
+              InkWell(
+                onTap: () => Navigator.of(context)
+                    .pushReplacementNamed(Sponsors.routeName),
+                child: Text(
+                  value4,
+                  style: Theme.of(context).textTheme.bodyText2.copyWith(
+                        color: const Color.fromRGBO(234, 115, 115, 1),
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ).tr(),
+              ),
             ],
           )
         ],
