@@ -23,8 +23,9 @@ class HomeSponsors extends StatelessWidget {
             value1,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyText2.copyWith(
-                  color: const Color.fromRGBO(234, 115, 115, 1),
-                  fontSize: 18,
+                  color: const Color.fromRGBO(255, 81, 81, 1),
+                  wordSpacing: 1.5,
+                  fontSize: 16,
                 ),
           ).tr(),
           Text(
@@ -32,7 +33,8 @@ class HomeSponsors extends StatelessWidget {
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyText2.copyWith(
                   color: const Color.fromRGBO(255, 81, 81, 1),
-                  fontSize: 18,
+                  wordSpacing: 1.5,
+                  fontSize: 16,
                 ),
           ).tr(),
           SizedBox(
