@@ -30,8 +30,7 @@ class HomeInfo extends StatelessWidget {
         Text(
           title,
           style: Theme.of(context).textTheme.bodyText1.copyWith(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
+                fontSize: 20,
               ),
         ).tr(),
         SizedBox(
@@ -41,7 +40,8 @@ class HomeInfo extends StatelessWidget {
           content,
           textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.bodyText1.copyWith(
-                fontSize: 18,
+                fontWeight: FontWeight.normal,
+                fontSize: 17,
               ),
         ).tr(),
         SizedBox(
@@ -66,7 +66,9 @@ class HomeInfo extends StatelessWidget {
                         'HomeInfo_Four_content_value2',
                         style: Theme.of(context).textTheme.bodyText1.copyWith(
                               fontSize: 18,
+                              fontWeight: FontWeight.normal,
                             ),
+                        textAlign: TextAlign.center,
                       ).tr(),
                     ],
                   ),
@@ -88,7 +90,9 @@ class HomeInfo extends StatelessWidget {
                         'HomeInfo_Four_content_value3',
                         style: Theme.of(context).textTheme.bodyText1.copyWith(
                               fontSize: 18,
+                              fontWeight: FontWeight.normal,
                             ),
+                        textAlign: TextAlign.center,
                       ).tr(),
                     ],
                   ),
@@ -103,15 +107,14 @@ class HomeInfo extends StatelessWidget {
                         color: Theme.of(context).textTheme.bodyText1.color,
                         size: 18,
                       ),
-                      const SizedBox(
-                        width: 10,
-                      ),
                       Expanded(
                         child: Text(
                           'HomeInfo_Four_content_value4',
                           style: Theme.of(context).textTheme.bodyText1.copyWith(
                                 fontSize: 18,
+                                fontWeight: FontWeight.normal,
                               ),
+                          textAlign: TextAlign.center,
                         ).tr(),
                       ),
                     ],

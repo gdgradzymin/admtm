@@ -38,6 +38,7 @@ class HomeContent extends StatelessWidget {
               contentTranslate,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyText1.copyWith(
+                    fontWeight: FontWeight.normal,
                     fontSize: 15,
                   ),
             ).tr(),
@@ -53,7 +54,7 @@ class HomeContent extends StatelessWidget {
               ),
             ),
             shape: RoundedRectangleBorder(
-              side: BorderSide(
+              side: const BorderSide(
                   color: Colors.white, width: 2, style: BorderStyle.solid),
               borderRadius: BorderRadius.circular(0),
             ),

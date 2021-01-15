@@ -1,3 +1,4 @@
+import 'package:admtm_app/screens/sponsors.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
@@ -23,8 +24,9 @@ class HomeSponsors extends StatelessWidget {
             value1,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyText2.copyWith(
-                  color: const Color.fromRGBO(234, 115, 115, 1),
-                  fontSize: 18,
+                  color: const Color.fromRGBO(255, 81, 81, 1),
+                  wordSpacing: 1.5,
+                  fontSize: 16,
                 ),
           ).tr(),
           Text(
@@ -32,7 +34,8 @@ class HomeSponsors extends StatelessWidget {
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyText2.copyWith(
                   color: const Color.fromRGBO(255, 81, 81, 1),
-                  fontSize: 18,
+                  wordSpacing: 1.5,
+                  fontSize: 16,
                 ),
           ).tr(),
           SizedBox(
@@ -48,14 +51,18 @@ class HomeSponsors extends StatelessWidget {
                       fontSize: 14,
                     ),
               ).tr(),
-              Text(
-                value4,
-                style: Theme.of(context).textTheme.bodyText2.copyWith(
-                      color: const Color.fromRGBO(234, 115, 115, 1),
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ).tr(),
+              InkWell(
+                onTap: () => Navigator.of(context)
+                    .pushReplacementNamed(Sponsors.routeName),
+                child: Text(
+                  value4,
+                  style: Theme.of(context).textTheme.bodyText2.copyWith(
+                        color: const Color.fromRGBO(234, 115, 115, 1),
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ).tr(),
+              ),
             ],
           )
         ],
