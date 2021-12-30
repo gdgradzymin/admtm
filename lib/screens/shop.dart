@@ -64,7 +64,7 @@ class Shop extends StatelessWidget {
                   child: Text(
                     'shop_content_title',
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline1.copyWith(
+                    style: Theme.of(context).textTheme.headline1!.copyWith(
                           color: Color.fromRGBO(234, 115, 115, 1),
                         ),
                   ).tr(),

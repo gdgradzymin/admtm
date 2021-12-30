@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DaysTrainings {
-  final String day;
-  final List<Training> listTrainings;
+  final String? day;
+  final List<Training>? listTrainings;
 
   DaysTrainings({
     this.day,
@@ -11,9 +11,9 @@ class DaysTrainings {
 }
 
 class Training {
-  final String training;
-  final String time;
-  final Color color;
+  final String? training;
+  final String? time;
+  final Color? color;
 
   Training({
     this.training,

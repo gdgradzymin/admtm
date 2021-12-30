@@ -7,9 +7,9 @@ class HomeInfoTitleWidgets extends StatelessWidget {
   final Size deviceSize;
 
   const HomeInfoTitleWidgets({
-    @required this.title,
-    @required this.content,
-    @required this.deviceSize,
+    required this.title,
+    required this.content,
+    required this.deviceSize,
   });
 
   @override
@@ -20,8 +20,8 @@ class HomeInfoTitleWidgets extends StatelessWidget {
           title,
           style: Theme.of(context)
               .textTheme
-              .bodyText1
-              .copyWith(fontWeight: FontWeight.bold, fontSize: 30),
+              .bodyText1!
+              .copyWith(fontWeight: FontWeight.bold, fontSize: 27),
         ).tr(),
         SizedBox(
           height: deviceSize.height * 0.05,
@@ -33,7 +33,7 @@ class HomeInfoTitleWidgets extends StatelessWidget {
         Text(
           content,
           textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.bodyText1.copyWith(
+          style: Theme.of(context).textTheme.bodyText1!.copyWith(
                 color: const Color.fromRGBO(255, 190, 190, 1),
                 fontSize: 15,
               ),

@@ -9,10 +9,10 @@ class HomeInfo extends StatelessWidget {
   final Size deviceSize;
 
   const HomeInfo({
-    @required this.title,
-    @required this.content,
-    @required this.icon,
-    @required this.deviceSize,
+    required this.title,
+    required this.content,
+    required this.icon,
+    required this.deviceSize,
   });
 
   @override
@@ -22,15 +22,16 @@ class HomeInfo extends StatelessWidget {
         Icon(
           icon,
           size: 35,
-          color: Theme.of(context).textTheme.bodyText1.color,
+          color: Theme.of(context).textTheme.bodyText1!.color,
         ),
         SizedBox(
           height: deviceSize.height * 0.05,
         ),
         Text(
           title,
-          style: Theme.of(context).textTheme.bodyText1.copyWith(
-                fontSize: 20,
+          style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
               ),
         ).tr(),
         SizedBox(
@@ -39,9 +40,8 @@ class HomeInfo extends StatelessWidget {
         Text(
           content,
           textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.bodyText1.copyWith(
-                fontWeight: FontWeight.normal,
-                fontSize: 17,
+          style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                fontSize: 18,
               ),
         ).tr(),
         SizedBox(
@@ -56,7 +56,7 @@ class HomeInfo extends StatelessWidget {
                     children: [
                       Icon(
                         FontAwesomeIcons.phone,
-                        color: Theme.of(context).textTheme.bodyText1.color,
+                        color: Theme.of(context).textTheme.bodyText1!.color,
                         size: 18,
                       ),
                       const SizedBox(
@@ -64,11 +64,9 @@ class HomeInfo extends StatelessWidget {
                       ),
                       Text(
                         'HomeInfo_Four_content_value2',
-                        style: Theme.of(context).textTheme.bodyText1.copyWith(
+                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
                               fontSize: 18,
-                              fontWeight: FontWeight.normal,
                             ),
-                        textAlign: TextAlign.center,
                       ).tr(),
                     ],
                   ),
@@ -80,7 +78,7 @@ class HomeInfo extends StatelessWidget {
                     children: [
                       Icon(
                         FontAwesomeIcons.envelope,
-                        color: Theme.of(context).textTheme.bodyText1.color,
+                        color: Theme.of(context).textTheme.bodyText1!.color,
                         size: 18,
                       ),
                       const SizedBox(
@@ -88,11 +86,9 @@ class HomeInfo extends StatelessWidget {
                       ),
                       Text(
                         'HomeInfo_Four_content_value3',
-                        style: Theme.of(context).textTheme.bodyText1.copyWith(
+                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
                               fontSize: 18,
-                              fontWeight: FontWeight.normal,
                             ),
-                        textAlign: TextAlign.center,
                       ).tr(),
                     ],
                   ),
@@ -104,17 +100,18 @@ class HomeInfo extends StatelessWidget {
                     children: [
                       Icon(
                         FontAwesomeIcons.mapMarkerAlt,
-                        color: Theme.of(context).textTheme.bodyText1.color,
+                        color: Theme.of(context).textTheme.bodyText1!.color,
                         size: 18,
+                      ),
+                      const SizedBox(
+                        width: 10,
                       ),
                       Expanded(
                         child: Text(
                           'HomeInfo_Four_content_value4',
-                          style: Theme.of(context).textTheme.bodyText1.copyWith(
+                          style: Theme.of(context).textTheme.bodyText1!.copyWith(
                                 fontSize: 18,
-                                fontWeight: FontWeight.normal,
                               ),
-                          textAlign: TextAlign.center,
                         ).tr(),
                       ),
                     ],

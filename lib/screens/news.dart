@@ -3,16 +3,18 @@ import 'package:admtm_app/shared/widgets/bottom.dart';
 import 'package:admtm_app/shared/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class News extends StatelessWidget {
   static const routeName = '/News';
 
   Widget spotLight({
-    BuildContext context,
-    String image,
-    String title,
-    String content,
-    String button,
+    required BuildContext context,
+    String? image,
+    required String title,
+    required String content,
+    required String button,
+    required String link,
   }) {
     return Container(
       color: Color.fromRGBO(29, 36, 42, 0.95),
@@ -27,7 +29,7 @@ class News extends StatelessWidget {
             child: Text(
               title,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline1.copyWith(
+              style: Theme.of(context).textTheme.headline1!.copyWith(
                     color: Colors.white,
                   ),
             ).tr(),
@@ -40,7 +42,7 @@ class News extends StatelessWidget {
             child: Text(
               content,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyText2.copyWith(
+              style: Theme.of(context).textTheme.bodyText2!.copyWith(
                     color: Colors.white,
                   ),
             ).tr(),
@@ -52,7 +54,7 @@ class News extends StatelessWidget {
             color: Colors.transparent,
             elevation: 15,
             child: FlatButton(
-              onPressed: () {},
+              onPressed: () => launch(link),
               child: Text(
                 button,
                 style: Theme.of(context).textTheme.bodyText1,
@@ -60,7 +62,10 @@ class News extends StatelessWidget {
             ),
             shape: RoundedRectangleBorder(
               side: BorderSide(
-                  color: Colors.white, width: 2, style: BorderStyle.solid),
+                color: Colors.white,
+                width: 2,
+                style: BorderStyle.solid,
+              ),
               borderRadius: BorderRadius.circular(0),
             ),
           ),
@@ -103,7 +108,7 @@ class News extends StatelessWidget {
                   child: Text(
                     'news_content_title',
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline1.copyWith(
+                    style: Theme.of(context).textTheme.headline1!.copyWith(
                           color: Color.fromRGBO(234, 115, 115, 1),
                         ),
                   ).tr(),
@@ -123,7 +128,7 @@ class News extends StatelessWidget {
                   child: Text(
                     'news_content_value1',
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyText2.copyWith(
+                    style: Theme.of(context).textTheme.bodyText2!.copyWith(
                           color: Color.fromRGBO(234, 115, 115, 1),
                         ),
                   ).tr(),
@@ -137,6 +142,7 @@ class News extends StatelessWidget {
                   title: 'news_content_facebook_title',
                   content: 'news_content_facebook_title_content',
                   button: 'news_content_facebook_title_button',
+                  link: 'https://pl-pl.facebook.com/amuaythai/',
                 ),
                 spotLight(
                   context: context,
@@ -144,6 +150,7 @@ class News extends StatelessWidget {
                   title: 'news_content_youtube_title',
                   content: 'news_content_youtube_title_content',
                   button: 'news_content_youtube_title_button',
+                  link: 'https://www.youtube.com/channel/UCF5rid4nSacFHpldejYfY-w',
                 ),
                 Container(
                   color: Theme.of(context).canvasColor,

@@ -87,7 +87,7 @@ class AboutUS extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: Theme.of(context)
                           .textTheme
-                          .headline1
+                          .headline1!
                           .copyWith(fontSize: 15),
                     ).tr(),
                     Image.asset('images/escola02.jpg'),
@@ -96,7 +96,7 @@ class AboutUS extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: Theme.of(context)
                           .textTheme
-                          .headline1
+                          .headline1!
                           .copyWith(fontSize: 15),
                     ).tr(),
                     ContentText(

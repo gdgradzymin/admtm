@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class ClassesContent extends StatelessWidget {
-  final Content selectedContent;
+  final Content? selectedContent;
 
   ClassesContent({this.selectedContent});
 

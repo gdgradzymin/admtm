@@ -12,7 +12,7 @@ class FightTeam extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size _deviceSize = MediaQuery.of(context).size;
 
-    Widget _fighter({BuildContext context, String image, int numberFighter}) {
+    Widget _fighter({required BuildContext context, required String image, int? numberFighter}) {
       return Column(
         children: [
           SizedBox(
@@ -25,7 +25,7 @@ class FightTeam extends StatelessWidget {
           Text(
             'fightteam_content_fighter${numberFighter}_name',
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.bodyText1.copyWith(
+            style: Theme.of(context).textTheme.bodyText1!.copyWith(
                   color: Color.fromRGBO(234, 115, 115, 1),
                 ),
           ).tr(),
@@ -37,7 +37,7 @@ class FightTeam extends StatelessWidget {
             child: Text(
               'fightteam_content_fighter${numberFighter}_description',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyText1.copyWith(
+              style: Theme.of(context).textTheme.bodyText1!.copyWith(
                     color: Color.fromRGBO(234, 115, 115, 1),
                     fontSize: 15,
                   ),
@@ -113,7 +113,7 @@ class FightTeam extends StatelessWidget {
                       child: Text(
                         'fightteam_content_value3',
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.bodyText1.copyWith(
+                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
                               color: Color.fromRGBO(234, 115, 115, 1),
                             ),
                       ).tr(),

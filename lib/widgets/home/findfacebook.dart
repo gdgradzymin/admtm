@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class HomeFindFacebook extends StatelessWidget {
-  final Size deviceSize;
+  final Size? deviceSize;
 
   const HomeFindFacebook({this.deviceSize});
 
@@ -21,33 +20,26 @@ class HomeFindFacebook extends StatelessWidget {
         children: [
           Text(
             'Home_findfacebook_value1',
-            style: Theme.of(context).textTheme.bodyText1.copyWith(
+            style: Theme.of(context).textTheme.bodyText1!.copyWith(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
           ).tr(),
           SizedBox(
-            height: deviceSize.height * 0.05,
+            height: deviceSize!.height * 0.05,
           ),
           Text(
             'Home_findfacebook_value2',
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.bodyText1.copyWith(
+            style: Theme.of(context).textTheme.bodyText1!.copyWith(
                   fontSize: 18,
                 ),
           ).tr(),
           SizedBox(
-            height: deviceSize.height * 0.05,
+            height: deviceSize!.height * 0.05,
           ),
           FlatButton(
-            onPressed: () async {
-              const url = 'https://pl-pl.facebook.com/muaythaimadeira/';
-              if (await canLaunch(url)) {
-                await launch(url);
-              } else {
-                throw 'Could not launch $url';
-              }
-            },
+            onPressed: () {},
             shape: RoundedRectangleBorder(
               side: const BorderSide(
                   color: Colors.white, width: 2, style: BorderStyle.solid),

@@ -16,17 +16,17 @@ class Classes extends StatefulWidget {
 }
 
 class _ClassesState extends State<Classes> {
-  Content _selectedContent = Content.one;
+  Content? _selectedContent = Content.one;
 
   // Content animation settings
-  Content _viewContent = Content.one;
+  Content? _viewContent = Content.one;
 
   bool _visible = true;
 
   final int _timeAnimationContent = 500;
   //
 
-  void changeView({Content contnet}) {
+  void changeView({Content? contnet}) {
     setState(() {
       _selectedContent = contnet;
     });

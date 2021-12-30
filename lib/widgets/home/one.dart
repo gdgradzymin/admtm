@@ -4,7 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 class HomeOne extends StatelessWidget {
   final Size deviceSize;
 
-  HomeOne({@required this.deviceSize});
+  HomeOne({required this.deviceSize});
 
   static const Color _textColor = Color.fromRGBO(255, 160, 160, 1);
 
@@ -23,7 +23,7 @@ class HomeOne extends StatelessWidget {
                 Text(
                   'HomeOne_value1',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyText2.copyWith(
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(
                         fontWeight: FontWeight.bold,
                         fontSize: 15,
                         color: _textColor,
@@ -32,7 +32,7 @@ class HomeOne extends StatelessWidget {
                 Text(
                   'HomeOne_value2',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyText2.copyWith(
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(
                         fontWeight: FontWeight.bold,
                         fontSize: 15,
                         color: _textColor,
@@ -44,7 +44,7 @@ class HomeOne extends StatelessWidget {
                 Text(
                   'HomeOne_value3',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyText2.copyWith(
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(
                         fontSize: 15,
                         color: _textColor,
                       ),
@@ -59,7 +59,7 @@ class HomeOne extends StatelessWidget {
                 Text(
                   'HomeOne_value4',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyText2.copyWith(
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(
                         fontSize: 15,
                         color: _textColor,
                       ),
