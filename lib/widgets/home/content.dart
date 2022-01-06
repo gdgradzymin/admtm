@@ -47,16 +47,16 @@ class HomeContent extends StatelessWidget {
           Card(
             color: Colors.transparent,
             elevation: 15,
-            child: FlatButton(
-              onPressed: () => Navigator.pushNamedAndRemoveUntil(
-                context,
-                routeName,
-                ModalRoute.withName('/'),
-              ),
+            child: TextButton(
               child: Text(
                 buttonTranslate.tr().toUpperCase(),
                 style: Theme.of(context).textTheme.bodyText1,
               ),
+              onPressed: () => () => Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    routeName,
+                    ModalRoute.withName('/'),
+                  ),
             ),
             shape: RoundedRectangleBorder(
               side: const BorderSide(

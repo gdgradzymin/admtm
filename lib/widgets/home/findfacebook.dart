@@ -38,13 +38,15 @@ class HomeFindFacebook extends StatelessWidget {
           SizedBox(
             height: deviceSize!.height * 0.05,
           ),
-          FlatButton(
+          TextButton(
             onPressed: () {},
-            shape: RoundedRectangleBorder(
+            style: ButtonStyle(
+                shape: MaterialStateProperty.all<OutlinedBorder>(
+                    RoundedRectangleBorder(
               side: const BorderSide(
                   color: Colors.white, width: 2, style: BorderStyle.solid),
               borderRadius: BorderRadius.circular(0),
-            ),
+            ))),
             child: Text(
               'Home_findfacebook_value3',
               style: Theme.of(context).textTheme.bodyText1,

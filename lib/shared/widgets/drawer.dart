@@ -21,9 +21,9 @@ class ScreensDrawer extends StatelessWidget {
     required Localization localization,
   }) {
     if (localization == Localization.english) {
-      ctx.locale = const Locale('en', 'US');
+      ctx.setLocale(const Locale('en', 'US'));
     } else {
-      ctx.locale = const Locale('pt', 'PT');
+      ctx.setLocale(const Locale('pt', 'PT'));
     }
   }
 

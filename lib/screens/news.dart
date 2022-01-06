@@ -53,12 +53,12 @@ class News extends StatelessWidget {
           Card(
             color: Colors.transparent,
             elevation: 15,
-            child: FlatButton(
-              onPressed: () => launch(link),
+            child: TextButton(
               child: Text(
                 button,
                 style: Theme.of(context).textTheme.bodyText1,
               ).tr(),
+              onPressed: () => launch(link),
             ),
             shape: RoundedRectangleBorder(
               side: const BorderSide(

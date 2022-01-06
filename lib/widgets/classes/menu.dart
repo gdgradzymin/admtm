@@ -24,12 +24,12 @@ class _ClassesMenuState extends State<ClassesMenu> {
     return Container(
       height: MediaQuery.of(context).size.height * 0.1,
       width: double.infinity,
-      child: FlatButton(
-        onPressed: () => widget.changeView!(contnet: contnet),
+      child: TextButton(
         child: Text(
           value,
           style: Theme.of(context).textTheme.bodyText1,
         ).tr(),
+        onPressed: () => widget.changeView!(contnet: contnet),
       ),
     );
   }
