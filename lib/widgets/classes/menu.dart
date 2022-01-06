@@ -1,12 +1,12 @@
 import 'package:admtm_app/screens/classes.dart';
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 
 class ClassesMenu extends StatefulWidget {
   final Content? selectedContent;
   final Function? changeView;
 
-  ClassesMenu({
+  const ClassesMenu({
     this.selectedContent,
     this.changeView,
   });
@@ -65,10 +65,15 @@ class _ClassesMenuState extends State<ClassesMenu> {
           _position = MediaQuery.of(context).size.height * 0.4;
         }
         break;
+      default:
+        {
+          _position = 0;
+        }
+        break;
     }
 
     return ClipRRect(
-      borderRadius: BorderRadius.all(Radius.circular(15)),
+      borderRadius: const BorderRadius.all(Radius.circular(15)),
       child: Container(
         color: const Color.fromRGBO(46, 56, 66, 1),
         width: MediaQuery.of(context).size.width * 0.75,

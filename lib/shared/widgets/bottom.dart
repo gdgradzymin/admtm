@@ -3,10 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ScreensBottom extends StatelessWidget {
   final Size? deviceSize;
-
-  ScreensBottom({this.deviceSize});
-
-  Color _content_color = Color.fromRGBO(255, 255, 255, 0.5);
+  const ScreensBottom({this.deviceSize});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +11,8 @@ class ScreensBottom extends StatelessWidget {
       padding: const EdgeInsets.all(24),
       child: Theme(
         data: ThemeData(
-          iconTheme: IconThemeData(
-            color: _content_color,
+          iconTheme: const IconThemeData(
+            color: Color.fromRGBO(255, 255, 255, 0.5),
           ),
         ),
         child: Column(
@@ -24,15 +21,15 @@ class ScreensBottom extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                  icon: Icon(FontAwesomeIcons.facebookF),
+                  icon: const Icon(FontAwesomeIcons.facebookF),
                   onPressed: () {},
                 ),
                 IconButton(
-                  icon: Icon(FontAwesomeIcons.youtube),
+                  icon: const Icon(FontAwesomeIcons.youtube),
                   onPressed: () {},
                 ),
                 IconButton(
-                  icon: Icon(FontAwesomeIcons.envelope),
+                  icon: const Icon(FontAwesomeIcons.envelope),
                   onPressed: () {},
                 ),
               ],
@@ -40,13 +37,13 @@ class ScreensBottom extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(FontAwesomeIcons.phoneAlt),
+                const Icon(FontAwesomeIcons.phoneAlt),
                 SizedBox(
                   width: deviceSize!.width * 0.05,
                 ),
-                Text(
+                const Text(
                   '(+351) 966373544',
-                  style: TextStyle(color: _content_color),
+                  style: TextStyle(color: Color.fromRGBO(255, 255, 255, 0.5)),
                 )
               ],
             ),

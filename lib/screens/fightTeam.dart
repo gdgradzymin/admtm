@@ -1,9 +1,8 @@
 import 'package:admtm_app/shared/widgets/appBar.dart';
 import 'package:admtm_app/shared/widgets/bottom.dart';
-import 'package:admtm_app/shared/widgets/contentText.dart';
 import 'package:admtm_app/shared/widgets/drawer.dart';
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 
 class FightTeam extends StatelessWidget {
   static const routeName = '/FightTeam';
@@ -12,7 +11,10 @@ class FightTeam extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size _deviceSize = MediaQuery.of(context).size;
 
-    Widget _fighter({required BuildContext context, required String image, int? numberFighter}) {
+    Widget _fighter(
+        {required BuildContext context,
+        required String image,
+        int? numberFighter}) {
       return Column(
         children: [
           SizedBox(
@@ -26,7 +28,7 @@ class FightTeam extends StatelessWidget {
             'fightteam_content_fighter${numberFighter}_name',
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                  color: Color.fromRGBO(234, 115, 115, 1),
+                  color: const Color.fromRGBO(234, 115, 115, 1),
                 ),
           ).tr(),
           SizedBox(
@@ -38,7 +40,7 @@ class FightTeam extends StatelessWidget {
               'fightteam_content_fighter${numberFighter}_description',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                    color: Color.fromRGBO(234, 115, 115, 1),
+                    color: const Color.fromRGBO(234, 115, 115, 1),
                     fontSize: 15,
                   ),
             ).tr(),
@@ -68,7 +70,7 @@ class FightTeam extends StatelessWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.all(16),
-                  color: Color.fromRGBO(46, 56, 66, 1),
+                  color: const Color.fromRGBO(46, 56, 66, 1),
                   child: Column(
                     children: [
                       SizedBox(
@@ -114,7 +116,7 @@ class FightTeam extends StatelessWidget {
                         'fightteam_content_value3',
                         textAlign: TextAlign.center,
                         style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                              color: Color.fromRGBO(234, 115, 115, 1),
+                              color: const Color.fromRGBO(234, 115, 115, 1),
                             ),
                       ).tr(),
                     ),
@@ -177,7 +179,7 @@ class FightTeam extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.all(16.0),
-                  color: Color.fromRGBO(46, 56, 66, 1),
+                  color: const Color.fromRGBO(46, 56, 66, 1),
                   child: Column(
                     children: [
                       SizedBox(

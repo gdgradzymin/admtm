@@ -2,8 +2,8 @@ import 'package:admtm_app/shared/widgets/appBar.dart';
 import 'package:admtm_app/shared/widgets/bottom.dart';
 import 'package:admtm_app/shared/widgets/contentText.dart';
 import 'package:admtm_app/shared/widgets/drawer.dart';
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 
 class AboutUS extends StatelessWidget {
   static const routeName = '/AboutUS';
@@ -30,55 +30,55 @@ class AboutUS extends StatelessWidget {
             children: [
               Container(
                 color: Colors.white,
-                padding: EdgeInsets.all(24),
+                padding: const EdgeInsets.all(24),
                 child: Column(
                   children: [
                     Image.asset('images/admtm_logo.jpg'),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     Text(
                       'aboutUS_content_value1',
                       style: Theme.of(context).textTheme.headline1,
                     ).tr(),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value2',
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value3',
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     Image.asset('images/logo_federation.jpg'),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value4',
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
+                    const Padding(
+                      padding: EdgeInsets.all(10.0),
                       child: ContentText(
                         value: 'aboutUS_content_value5',
                       ),
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value6',
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value7',
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value8',
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value9',
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value10',
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value11',
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value12',
                     ),
                     Image.asset('images/escola01.jpg'),
@@ -99,26 +99,26 @@ class AboutUS extends StatelessWidget {
                           .headline1!
                           .copyWith(fontSize: 15),
                     ).tr(),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value15',
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value16',
                     ),
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Image.asset('images/dft_logo_small.png'),
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value17',
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value18',
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value19',
                     ),
-                    ContentText(
+                    const ContentText(
                       value: 'aboutUS_content_value20',
                     ),
                   ],

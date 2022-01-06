@@ -1,7 +1,7 @@
 import 'package:admtm_app/screens/classes.dart';
 import 'package:admtm_app/shared/widgets/contentText.dart';
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 
 class ClassesContent extends StatelessWidget {
   final Content? selectedContent;

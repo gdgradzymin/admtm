@@ -4,7 +4,6 @@ import 'package:admtm_app/shared/widgets/drawer.dart';
 import 'package:admtm_app/widgets/classes/content.dart';
 import 'package:admtm_app/widgets/classes/menu.dart';
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart';
 
 enum Content { one, two, three, four, five }
 

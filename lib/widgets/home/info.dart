@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeInfo extends StatelessWidget {
@@ -109,9 +109,10 @@ class HomeInfo extends StatelessWidget {
                       Expanded(
                         child: Text(
                           'HomeInfo_Four_content_value4',
-                          style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                                fontSize: 18,
-                              ),
+                          style:
+                              Theme.of(context).textTheme.bodyText1!.copyWith(
+                                    fontSize: 18,
+                                  ),
                         ).tr(),
                       ),
                     ],

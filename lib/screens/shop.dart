@@ -1,8 +1,8 @@
 import 'package:admtm_app/shared/widgets/appBar.dart';
 import 'package:admtm_app/shared/widgets/bottom.dart';
 import 'package:admtm_app/shared/widgets/drawer.dart';
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 
 class Shop extends StatelessWidget {
   static const routeName = '/Shop';
@@ -65,7 +65,7 @@ class Shop extends StatelessWidget {
                     'shop_content_title',
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.headline1!.copyWith(
-                          color: Color.fromRGBO(234, 115, 115, 1),
+                          color: const Color.fromRGBO(234, 115, 115, 1),
                         ),
                   ).tr(),
                 ),
@@ -73,8 +73,8 @@ class Shop extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.0125,
                 ),
                 const Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: const Divider(),
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Divider(),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.0125,
