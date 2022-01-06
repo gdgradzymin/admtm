@@ -2,41 +2,42 @@ import 'package:admtm_app/shared/widgets/appBar.dart';
 import 'package:admtm_app/shared/widgets/bottom.dart';
 import 'package:admtm_app/shared/widgets/drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Sponsors extends StatelessWidget {
   static const routeName = '/Sponsors';
 
-  final List<String> _imagesSponsors = [
-    'aquimadeira.jpg',
-    'class_house.jpg',
-    'logo_4litro.png',
-    'logo_ad_automoveis.jpg',
-    'logo_alberto_oculista.jpg',
-    'logo_atms.png',
-    'logo_auto_piornais.png',
-    'logo_beach_bar.jpg',
-    'logo_bordados_pontg.png',
-    'logo_carbonara.jpg',
-    'logo_cidade_velha.png',
-    'logo_cme.png',
-    'logo_dubai.png',
-    'logo_eoccu.jpg',
-    'logo_green_devis_safari.png',
-    'logo_hotel_eira_do_serrado_ans_spa.png',
-    'logo_luminoso_rainha.jpg',
-    'logo_mimos.jpg',
-    'logo_miro_freitas.jpg',
-    'logo_muscle_power.png',
-    'logo_nico_burger.jpg',
-    'logo_ocean_gardens_hotel.png',
-    'logo_old_town_bar.jpg',
-    'logo_pdf-convert.png',
-    'logo_podio_classico.jpg',
-    'logo_prova_la_pasta.jpg',
-    'logo_rui_bombas.jpg',
-    'logo_snack_bar.jpg',
-    'logo_super_lobos.jpg',
-    'logo_tipografia_natividade.jpg',
+  final List<ImageWithLink> _imagesSponsors = [
+    ImageWithLink(asset: 'aquimadeira.jpg', link: ''),
+    ImageWithLink(asset: 'class_house.jpg', link: ''),
+    ImageWithLink(asset: 'logo_4litro.png', link: ''),
+    ImageWithLink(asset: 'logo_ad_automoveis.jpg', link: ''),
+    ImageWithLink(asset: 'logo_alberto_oculista.jpg', link: ''),
+    ImageWithLink(asset: 'logo_atms.png', link: ''),
+    ImageWithLink(asset: 'logo_auto_piornais.png', link: ''),
+    ImageWithLink(asset: 'logo_beach_bar.jpg', link: ''),
+    ImageWithLink(asset: 'logo_bordados_pontg.png', link: ''),
+    ImageWithLink(asset: 'logo_carbonara.jpg', link: ''),
+    ImageWithLink(asset: 'logo_cidade_velha.png', link: ''),
+    ImageWithLink(asset: 'logo_cme.png', link: ''),
+    ImageWithLink(asset: 'logo_dubai.png', link: ''),
+    ImageWithLink(asset: 'logo_eoccu.jpg', link: ''),
+    ImageWithLink(asset: 'logo_green_devis_safari.png', link: ''),
+    ImageWithLink(asset: 'logo_hotel_eira_do_serrado_ans_spa.png', link: ''),
+    ImageWithLink(asset: 'logo_luminoso_rainha.jpg', link: ''),
+    ImageWithLink(asset: 'logo_mimos.jpg', link: ''),
+    ImageWithLink(asset: 'logo_miro_freitas.jpg', link: ''),
+    ImageWithLink(asset: 'logo_muscle_power.png', link: ''),
+    ImageWithLink(asset: 'logo_nico_burger.jpg', link: ''),
+    ImageWithLink(asset: 'logo_ocean_gardens_hotel.png', link: ''),
+    ImageWithLink(asset: 'logo_old_town_bar.jpg', link: ''),
+    ImageWithLink(asset: 'logo_pdf-convert.png', link: ''),
+    ImageWithLink(asset: 'logo_podio_classico.jpg', link: ''),
+    ImageWithLink(asset: 'logo_prova_la_pasta.jpg', link: ''),
+    ImageWithLink(asset: 'logo_rui_bombas.jpg', link: ''),
+    ImageWithLink(asset: 'logo_snack_bar.jpg', link: ''),
+    ImageWithLink(asset: 'logo_super_lobos.jpg', link: ''),
+    ImageWithLink(asset: 'logo_tipografia_natividade.jpg', link: ''),
   ];
 
   @override
@@ -69,8 +70,14 @@ class Sponsors extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Column(
                     children: _imagesSponsors
-                        .map((String image) =>
-                            Image.asset('images/sponsors/$image'))
+                        .map(
+                          (ImageWithLink image) => GestureDetector(
+                            onTap: () async {
+                              // await launch(image.link);
+                            },
+                            child: Image.asset('images/sponsors/${image.asset}'),
+                          ),
+                        )
                         .toList(),
                   ),
                 ),
@@ -90,4 +97,14 @@ class Sponsors extends StatelessWidget {
       ),
     );
   }
+}
+
+class ImageWithLink {
+  final String asset;
+  final String link;
+
+  ImageWithLink({
+    required this.asset,
+    required this.link,
+  });
 }

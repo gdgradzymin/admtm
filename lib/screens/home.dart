@@ -1,3 +1,7 @@
+import 'package:admtm_app/screens/aboutUs.dart';
+import 'package:admtm_app/screens/classes.dart';
+import 'package:admtm_app/screens/fightTeam.dart';
+import 'package:admtm_app/screens/whatismt.dart';
 import 'package:admtm_app/shared/widgets/drawer.dart';
 import 'package:admtm_app/widgets/home/InfotitleWidgets.dart';
 import 'package:admtm_app/widgets/home/appBar.dart';
@@ -12,9 +16,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key key, this.title}) : super(key: key);
+  const Home({Key? key, this.title}) : super(key: key);
 
-  final String title;
+  final String? title;
 
   @override
   _HomeState createState() => _HomeState();
@@ -53,6 +57,7 @@ class _HomeState extends State<Home> {
                   buttonTranslate: 'HomeTwo_button',
                   imageAsset: 'images/aboutus_xlaozc3la0.jpg',
                   deviceSize: _deviceSize,
+                  routeName: AboutUS.routeName,
                 ),
               ),
               Flexible(
@@ -63,6 +68,7 @@ class _HomeState extends State<Home> {
                   buttonTranslate: 'HomeThree_button',
                   imageAsset: 'images/admtm_xk35euui0a.jpg',
                   deviceSize: _deviceSize,
+                  routeName: Classes.routeName,
                 ),
               ),
               Flexible(
@@ -73,6 +79,7 @@ class _HomeState extends State<Home> {
                   buttonTranslate: 'HomeFour_button',
                   imageAsset: 'images/admtm_x234dizoop.jpg',
                   deviceSize: _deviceSize,
+                  routeName: Whatismt.routeName,
                 ),
               ),
               Flexible(
@@ -83,6 +90,7 @@ class _HomeState extends State<Home> {
                   buttonTranslate: 'HomeFive_button',
                   imageAsset: 'images/admtm_team02v2.jpg',
                   deviceSize: _deviceSize,
+                  routeName: FightTeam.routeName,
                 ),
               ),
               Flexible(

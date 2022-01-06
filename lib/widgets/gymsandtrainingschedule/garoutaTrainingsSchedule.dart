@@ -2,7 +2,7 @@ import 'package:admtm_app/models/gymsandtrainingschedule.dart';
 import 'package:flutter/material.dart';
 
 class GaroutaTrainingSchedule extends StatelessWidget {
-  final Size deviceSize;
+  final Size? deviceSize;
 
   GaroutaTrainingSchedule({this.deviceSize});
 
@@ -135,14 +135,14 @@ class GaroutaTrainingSchedule extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          height: deviceSize.height * 0.025,
+          height: deviceSize!.height * 0.025,
         ),
         Text(
           'TRAININGS SCHEDULE',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
         ),
         SizedBox(
-          height: deviceSize.height * 0.025,
+          height: deviceSize!.height * 0.025,
         ),
         Container(
           height: 300,
@@ -157,17 +157,17 @@ class GaroutaTrainingSchedule extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      _contentOneTrainings[index].day,
+                      _contentOneTrainings[index].day!,
                       style: TextStyle(fontSize: 13),
                     ),
                     SizedBox(
-                      height: deviceSize.height * 0.025,
+                      height: deviceSize!.height * 0.025,
                     ),
                     Container(
                       width: 150,
                       child: Column(
                         children: _contentOneTrainings[index]
-                            .listTrainings
+                            .listTrainings!
                             .map((Training training) {
                           return Container(
                             height: 80,
@@ -182,26 +182,26 @@ class GaroutaTrainingSchedule extends StatelessWidget {
                               children: [
                                 Container(
                                   child: Text(
-                                    training.training,
+                                    training.training!,
                                     textAlign: TextAlign.center,
                                     style: Theme.of(context)
                                         .textTheme
-                                        .bodyText1
+                                        .bodyText1!
                                         .copyWith(
                                           fontWeight: FontWeight.normal,
-                                          fontSize: deviceSize.height * 0.02,
+                                          fontSize: deviceSize!.height * 0.02,
                                         ),
                                   ),
                                 ),
                                 Text(
-                                  training.time,
+                                  training.time!,
                                   textAlign: TextAlign.center,
                                   style: Theme.of(context)
                                       .textTheme
-                                      .bodyText1
+                                      .bodyText1!
                                       .copyWith(
                                         fontWeight: FontWeight.normal,
-                                        fontSize: deviceSize.height * 0.02,
+                                        fontSize: deviceSize!.height * 0.02,
                                       ),
                                 ),
                               ],

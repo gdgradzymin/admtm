@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class GymsAndTrainingMenu extends StatefulWidget {
-  final Content selectedContent;
-  final Function changeView;
+  final Content? selectedContent;
+  final Function? changeView;
 
   GymsAndTrainingMenu({
     this.selectedContent,
@@ -17,15 +17,15 @@ class GymsAndTrainingMenu extends StatefulWidget {
 
 class _GymsAndTrainingMenuState extends State<GymsAndTrainingMenu> {
   Widget _menuValue({
-    @required BuildContext ctx,
-    @required String value,
-    @required Content contnet,
+    required BuildContext ctx,
+    required String value,
+    required Content contnet,
   }) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.1,
       width: double.infinity,
       child: FlatButton(
-        onPressed: () => widget.changeView(contnet: contnet),
+        onPressed: () => widget.changeView!(contnet: contnet),
         child: Text(
           value,
           style: Theme.of(context).textTheme.bodyText1,
@@ -37,7 +37,7 @@ class _GymsAndTrainingMenuState extends State<GymsAndTrainingMenu> {
   @override
   Widget build(BuildContext context) {
     // Settings menu
-    double _position;
+    double? _position;
 
     switch (widget.selectedContent) {
       case Content.one:

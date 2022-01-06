@@ -1,3 +1,4 @@
+import 'package:admtm_app/screens/aboutUs.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
@@ -7,13 +8,15 @@ class HomeContent extends StatelessWidget {
   final String buttonTranslate;
   final String imageAsset;
   final Size deviceSize;
+  final String routeName;
 
   const HomeContent({
-    @required this.titleTranslate,
-    @required this.contentTranslate,
-    @required this.buttonTranslate,
-    @required this.imageAsset,
-    @required this.deviceSize,
+    required this.titleTranslate,
+    required this.contentTranslate,
+    required this.buttonTranslate,
+    required this.imageAsset,
+    required this.deviceSize,
+    required this.routeName,
   });
 
   @override
@@ -27,7 +30,7 @@ class HomeContent extends StatelessWidget {
           ),
           Text(
             titleTranslate,
-            style: Theme.of(context).textTheme.bodyText1.copyWith(
+            style: Theme.of(context).textTheme.bodyText1!.copyWith(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
@@ -37,8 +40,7 @@ class HomeContent extends StatelessWidget {
             child: Text(
               contentTranslate,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyText1.copyWith(
-                    fontWeight: FontWeight.normal,
+              style: Theme.of(context).textTheme.bodyText1!.copyWith(
                     fontSize: 15,
                   ),
             ).tr(),
@@ -47,7 +49,11 @@ class HomeContent extends StatelessWidget {
             color: Colors.transparent,
             elevation: 15,
             child: FlatButton(
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                context,
+                routeName,
+                ModalRoute.withName('/'),
+              ),
               child: Text(
                 buttonTranslate.tr().toUpperCase(),
                 style: Theme.of(context).textTheme.bodyText1,
@@ -55,7 +61,10 @@ class HomeContent extends StatelessWidget {
             ),
             shape: RoundedRectangleBorder(
               side: const BorderSide(
-                  color: Colors.white, width: 2, style: BorderStyle.solid),
+                color: Colors.white,
+                width: 2,
+                style: BorderStyle.solid,
+              ),
               borderRadius: BorderRadius.circular(0),
             ),
           ),

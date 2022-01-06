@@ -4,7 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 class ContentText extends StatelessWidget {
   final String value;
 
-  ContentText({@required this.value});
+  ContentText({required this.value});
 
   Color _content_color = Color.fromRGBO(0, 0, 0, 0.65);
 

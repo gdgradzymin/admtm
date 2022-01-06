@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class GymsAndTrainingContent extends StatelessWidget {
-  final Content selectedContent;
-  final Size deviceSize;
+  final Content? selectedContent;
+  final Size? deviceSize;
 
   GymsAndTrainingContent({
     this.selectedContent,
@@ -29,18 +29,20 @@ class GymsAndTrainingContent extends StatelessWidget {
     'gym006',
   ];
 
+  CarouselOptions _carouselOptions = CarouselOptions(
+    height: 200.0,
+    viewportFraction: 0.8,
+    autoPlay: true,
+    enlargeCenterPage: true,
+  );
+
   Widget oneContent(BuildContext ctx) {
     return Column(
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0),
           child: CarouselSlider(
-            options: CarouselOptions(
-              height: 400.0,
-              viewportFraction: 0.8,
-              autoPlay: true,
-              enlargeCenterPage: true,
-            ),
+            options: _carouselOptions,
             items: contentOneImages.map((String image) {
               return Builder(
                 builder: (BuildContext context) {
@@ -49,7 +51,6 @@ class GymsAndTrainingContent extends StatelessWidget {
                     margin: const EdgeInsets.symmetric(horizontal: 5.0),
                     child: Image.asset(
                       'images/gymsandtrainingschedule/$image.jpg',
-                      fit: BoxFit.cover,
                     ),
                   );
                 },
@@ -58,7 +59,7 @@ class GymsAndTrainingContent extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: deviceSize.height * 0.025,
+          height: deviceSize!.height * 0.025,
         ),
         Container(
           width: double.infinity,
@@ -96,12 +97,7 @@ class GymsAndTrainingContent extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0),
           child: CarouselSlider(
-            options: CarouselOptions(
-              height: 400.0,
-              viewportFraction: 0.8,
-              autoPlay: true,
-              enlargeCenterPage: true,
-            ),
+            options: _carouselOptions,
             items: contentTwoImages.map((String image) {
               return Builder(
                 builder: (BuildContext context) {
@@ -110,7 +106,6 @@ class GymsAndTrainingContent extends StatelessWidget {
                     margin: const EdgeInsets.symmetric(horizontal: 5.0),
                     child: Image.asset(
                       'images/gymsandtrainingschedule/$image.jpg',
-                      fit: BoxFit.cover,
                     ),
                   );
                 },
@@ -119,7 +114,7 @@ class GymsAndTrainingContent extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: deviceSize.height * 0.025,
+          height: deviceSize!.height * 0.025,
         ),
         Container(
           width: double.infinity,

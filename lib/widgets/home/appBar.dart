@@ -4,7 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 class HomeAppBar extends StatefulWidget {
   final Size deviceSize;
 
-  const HomeAppBar({@required this.deviceSize});
+  const HomeAppBar({required this.deviceSize});
 
   @override
   _HomeAppBarState createState() => _HomeAppBarState();
@@ -12,8 +12,8 @@ class HomeAppBar extends StatefulWidget {
 
 class _HomeAppBarState extends State<HomeAppBar>
     with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
-  Animation _animation;
+  late AnimationController _animationController;
+  late Animation _animation;
 
   bool _animations = true;
 

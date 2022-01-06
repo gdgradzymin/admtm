@@ -7,9 +7,9 @@ class ScreensAppBar extends StatefulWidget {
   final Size deviceSize;
 
   const ScreensAppBar({
-    @required this.appBarValue1,
+    required this.appBarValue1,
     this.appBarValue2 = '',
-    @required this.deviceSize,
+    required this.deviceSize,
   });
 
   @override
@@ -18,8 +18,8 @@ class ScreensAppBar extends StatefulWidget {
 
 class _ScreensAppBarState extends State<ScreensAppBar>
     with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
-  Animation _animation;
+  late AnimationController _animationController;
+  late Animation _animation;
 
   bool _animations = true;
 
@@ -98,7 +98,7 @@ class _ScreensAppBarState extends State<ScreensAppBar>
                     children: [
                       Text(
                         widget.appBarValue1,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 19.0,
                           fontWeight: FontWeight.bold,
