@@ -2,8 +2,8 @@ import 'package:admtm_app/shared/widgets/appBar.dart';
 import 'package:admtm_app/shared/widgets/bottom.dart';
 import 'package:admtm_app/shared/widgets/contentText.dart';
 import 'package:admtm_app/shared/widgets/drawer.dart';
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 
 class Whatismt extends StatelessWidget {
   static const routeName = '/Whatismt';
@@ -23,16 +23,16 @@ class Whatismt extends StatelessWidget {
             'whatismt_content_value1',
             style: Theme.of(context).textTheme.headline1,
           ).tr(), // Title
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value2',
           ),
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value3',
           ),
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value4',
           ),
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value5',
           ),
           Padding(
@@ -41,31 +41,31 @@ class Whatismt extends StatelessWidget {
               'images/whatismt/whatismt02.jpg',
             ),
           ),
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value6',
           ),
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value7',
           ),
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value8',
           ),
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value9',
           ),
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value10',
           ),
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value11',
           ),
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value12',
           ),
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value13',
           ),
-          ContentText(
+          const ContentText(
             value: 'whatismt_content_value14',
           ),
         ],

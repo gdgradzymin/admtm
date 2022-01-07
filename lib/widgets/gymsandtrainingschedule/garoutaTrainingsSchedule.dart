@@ -13,17 +13,17 @@ class GaroutaTrainingSchedule extends StatelessWidget {
         Training(
           training: 'Muay Thai Kids',
           time: '18:30 - 19:30',
-          color: Color.fromRGBO(120, 144, 156, 1),
+          color: const Color.fromRGBO(120, 144, 156, 1),
         ),
         Training(
           training: 'Muay Thai Beginners',
           time: '19:30 - 20:30',
-          color: Color.fromRGBO(84, 110, 122, 1),
+          color: const Color.fromRGBO(84, 110, 122, 1),
         ),
         Training(
           training: 'Muay Thai Advanced',
           time: '20:30 - 22:00',
-          color: Color.fromRGBO(69, 90, 100, 1),
+          color: const Color.fromRGBO(69, 90, 100, 1),
         ),
       ],
     ),
@@ -53,17 +53,17 @@ class GaroutaTrainingSchedule extends StatelessWidget {
         Training(
           training: 'Muay Thai Kids',
           time: '18:30 - 19:30',
-          color: Color.fromRGBO(120, 144, 156, 1),
+          color: const Color.fromRGBO(120, 144, 156, 1),
         ),
         Training(
           training: 'Muay Thai Beginners',
           time: '19:30 - 20:30',
-          color: Color.fromRGBO(84, 110, 122, 1),
+          color: const Color.fromRGBO(84, 110, 122, 1),
         ),
         Training(
           training: 'Muay Thai Advanced',
           time: '20:30 - 22:00',
-          color: Color.fromRGBO(69, 90, 100, 1),
+          color: const Color.fromRGBO(69, 90, 100, 1),
         ),
       ],
     ),
@@ -98,7 +98,7 @@ class GaroutaTrainingSchedule extends StatelessWidget {
         Training(
           training: 'Dynamic Fight Training',
           time: '19:30 - 20:30',
-          color: Color.fromRGBO(198, 40, 40, 1),
+          color: const Color.fromRGBO(198, 40, 40, 1),
         ),
         Training(
           training: '',
@@ -113,7 +113,7 @@ class GaroutaTrainingSchedule extends StatelessWidget {
         Training(
           training: 'Muay Thai',
           time: '10:00 - 12:00',
-          color: Color.fromRGBO(69, 90, 100, 1),
+          color: const Color.fromRGBO(69, 90, 100, 1),
         ),
         Training(
           training: '',
@@ -137,7 +137,7 @@ class GaroutaTrainingSchedule extends StatelessWidget {
         SizedBox(
           height: deviceSize!.height * 0.025,
         ),
-        Text(
+        const Text(
           'TRAININGS SCHEDULE',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
         ),
@@ -158,7 +158,7 @@ class GaroutaTrainingSchedule extends StatelessWidget {
                   children: [
                     Text(
                       _contentOneTrainings[index].day!,
-                      style: TextStyle(fontSize: 13),
+                      style: const TextStyle(fontSize: 13),
                     ),
                     SizedBox(
                       height: deviceSize!.height * 0.025,
@@ -172,11 +172,10 @@ class GaroutaTrainingSchedule extends StatelessWidget {
                           return Container(
                             height: 80,
                             width: double.infinity,
-                            padding: EdgeInsets.all(10.0),
-                            margin: EdgeInsets.only(bottom: 1.0),
-                            color: training.color != null
-                                ? training.color
-                                : Color.fromRGBO(192, 192, 192, 1),
+                            padding: const EdgeInsets.all(10.0),
+                            margin: const EdgeInsets.only(bottom: 1.0),
+                            color: training.color ??
+                                const Color.fromRGBO(192, 192, 192, 1),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [

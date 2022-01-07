@@ -4,8 +4,8 @@ import 'package:admtm_app/widgets/gymsandtrainingschedule/camaraTrainingsSchedul
 import 'package:admtm_app/widgets/gymsandtrainingschedule/franciscoTrainingSchedule.dart';
 import 'package:admtm_app/widgets/gymsandtrainingschedule/garoutaTrainingsSchedule.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 
 class GymsAndTrainingContent extends StatelessWidget {
   final Content? selectedContent;
@@ -29,7 +29,7 @@ class GymsAndTrainingContent extends StatelessWidget {
     'gym006',
   ];
 
-  CarouselOptions _carouselOptions = CarouselOptions(
+  final CarouselOptions _carouselOptions = CarouselOptions(
     height: 200.0,
     viewportFraction: 0.8,
     autoPlay: true,

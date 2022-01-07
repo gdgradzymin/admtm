@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HomePartners extends StatelessWidget {
   final Size? deviceSize;
 
-  HomePartners({this.deviceSize});
+  const HomePartners({this.deviceSize});
 
   @override
   Widget build(BuildContext context) {

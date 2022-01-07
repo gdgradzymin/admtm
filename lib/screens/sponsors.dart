@@ -2,7 +2,6 @@ import 'package:admtm_app/shared/widgets/appBar.dart';
 import 'package:admtm_app/shared/widgets/bottom.dart';
 import 'package:admtm_app/shared/widgets/drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Sponsors extends StatelessWidget {
   static const routeName = '/Sponsors';
@@ -75,7 +74,8 @@ class Sponsors extends StatelessWidget {
                             onTap: () async {
                               // await launch(image.link);
                             },
-                            child: Image.asset('images/sponsors/${image.asset}'),
+                            child:
+                                Image.asset('images/sponsors/${image.asset}'),
                           ),
                         )
                         .toList(),

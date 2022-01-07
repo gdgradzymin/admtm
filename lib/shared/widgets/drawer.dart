@@ -6,8 +6,8 @@ import 'package:admtm_app/screens/news.dart';
 import 'package:admtm_app/screens/shop.dart';
 import 'package:admtm_app/screens/sponsors.dart';
 import 'package:admtm_app/screens/whatismt.dart';
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 
 enum Localization { english, portugal }
 
@@ -21,9 +21,9 @@ class ScreensDrawer extends StatelessWidget {
     required Localization localization,
   }) {
     if (localization == Localization.english) {
-      ctx.locale = const Locale('en', 'US');
+      ctx.setLocale(const Locale('en', 'US'));
     } else {
-      ctx.locale = const Locale('pt', 'PT');
+      ctx.setLocale(const Locale('pt', 'PT'));
     }
   }
 
@@ -58,7 +58,8 @@ class ScreensDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: Theme.of(context).copyWith(canvasColor: Colors.transparent), // Invisible background
+      data: Theme.of(context)
+          .copyWith(canvasColor: Colors.transparent), // Invisible background
       child: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -77,7 +78,8 @@ class ScreensDrawer extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
-                      onTap: () => changeLocalization(ctx: context, localization: Localization.portugal),
+                      onTap: () => changeLocalization(
+                          ctx: context, localization: Localization.portugal),
                       child: Container(
                         width: deviceSize.width * 0.1,
                         child: Image.asset(
@@ -89,7 +91,8 @@ class ScreensDrawer extends StatelessWidget {
                       width: deviceSize.width * 0.05,
                     ),
                     InkWell(
-                      onTap: () => changeLocalization(ctx: context, localization: Localization.english),
+                      onTap: () => changeLocalization(
+                          ctx: context, localization: Localization.english),
                       child: Container(
                         width: deviceSize.width * 0.1,
                         child: Image.asset(
