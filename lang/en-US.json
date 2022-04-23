@@ -155,5 +155,13 @@
     "shop_appbar_value2": "WE HAVE SOME NICE, CUSTOMIZED EQUIPMENT.",
     "shop_content_title": "WE HAVE ALL EQUIPMENT YOU NEED TO TRAIN: BOXING GLOVES, SHIN GUARDS, MUAY THAI SHORTS, T-SHIRTS, HOODIES AND MANY MORE.",
     "sponsors_appbar_value1": "SPONSORS",
-    "sponsors_appbar_value2": "IT WOULD BE IMPOSIBLE WITHOUT YOUR HELP. THANK YOU."
+    "sponsors_appbar_value2": "IT WOULD BE IMPOSIBLE WITHOUT YOUR HELP. THANK YOU.",
+    "trainings_schedule": "TRAININGS SCHEDULE",
+    "day": "Day",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday"
 }

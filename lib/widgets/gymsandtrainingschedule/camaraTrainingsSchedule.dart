@@ -1,4 +1,5 @@
 import 'package:admtm_app/models/gymsandtrainingschedule.dart';
+import 'package:admtm_app/widgets/gymsandtrainingschedule/trainings_schedule.dart';
 import 'package:flutter/material.dart';
 
 class CamaraTrainingSchedule extends StatelessWidget {
@@ -6,184 +7,214 @@ class CamaraTrainingSchedule extends StatelessWidget {
 
   CamaraTrainingSchedule({this.deviceSize});
 
-  final List<DaysTrainings> _contentOneTrainings = [
-    DaysTrainings(
-      day: 'Monday',
+  final List<TypeTrainings> _contentOneTrainings = [
+    TypeTrainings(
+      type: 'Muay Thai',
       listTrainings: [
-        Training(
-          training: 'Muay Thai',
-          time: '10:00 - 12:00',
+        Day(
+          day: 'monday',
+          time: '10:00 - 12:00\n14:00 - 17:00',
           color: const Color.fromRGBO(69, 90, 100, 1),
         ),
-        Training(
-          training: 'Muay Thai',
-          time: '14:00 - 17:00',
+        Day(
+          day: 'tuesday',
+          time: '-',
           color: const Color.fromRGBO(69, 90, 100, 1),
         ),
-        Training(
-          training: 'Fitness',
-          time: '18:30 - 20:00',
-          color: const Color.fromRGBO(0, 150, 136, 1),
-        ),
-        Training(
-          training: 'Dynamic Fight Training',
-          time: '19:30 - 20:30',
-          color: const Color.fromRGBO(198, 40, 40, 1),
-        ),
-        Training(
-          training: '',
-          time: '',
-          color: null,
-        ),
-      ],
-    ),
-    DaysTrainings(
-      day: 'Tuesday',
-      listTrainings: [
-        Training(
-          training: '',
-          time: '',
-          color: null,
-        ),
-        Training(
-          training: '',
-          time: '',
-          color: null,
-        ),
-        Training(
-          training: 'Muay Thai Kids',
-          time: '18:00 - 19:30',
-          color: const Color.fromRGBO(120, 144, 156, 1),
-        ),
-        Training(
-          training: 'Muay Thai Beginners',
-          time: '19:30 - 20:30',
-          color: const Color.fromRGBO(84, 110, 122, 1),
-        ),
-        Training(
-          training: 'Muay Thai Advanced',
-          time: '20:30 - 22:00',
+        Day(
+          day: 'wednesday',
+          time: '10:00 - 12:00\n14:00 - 17:00',
           color: const Color.fromRGBO(69, 90, 100, 1),
         ),
-      ],
-    ),
-    DaysTrainings(
-      day: 'Wednesday',
-      listTrainings: [
-        Training(
-          training: 'Muay Thai',
-          time: '10:00 - 12:00',
+        Day(
+          day: 'thursday',
+          time: '-',
           color: const Color.fromRGBO(69, 90, 100, 1),
         ),
-        Training(
-          training: 'Muay Thai',
-          time: '14:00 - 17:00',
+        Day(
+          day: 'friday',
+          time: '10:00 - 12:00\n14:00 - 17:00',
           color: const Color.fromRGBO(69, 90, 100, 1),
         ),
-        Training(
-          training: 'Fitness',
-          time: '18:30 - 20:00',
-          color: const Color.fromRGBO(0, 150, 136, 1),
-        ),
-        Training(
-          training: 'Dynamic Fight Training',
-          time: '19:30 - 20:30',
-          color: const Color.fromRGBO(198, 40, 40, 1),
-        ),
-        Training(
-          training: '',
-          time: '',
-          color: null,
-        ),
-      ],
-    ),
-    DaysTrainings(
-      day: 'Thursday',
-      listTrainings: [
-        Training(
-          training: '',
-          time: '',
-          color: null,
-        ),
-        Training(
-          training: '',
-          time: '',
-          color: null,
-        ),
-        Training(
-          training: 'Muay Thai Kids',
-          time: '18:00 - 19:30',
-          color: const Color.fromRGBO(120, 144, 156, 1),
-        ),
-        Training(
-          training: 'Muay Thai Beginners',
-          time: '19:30 - 20:30',
-          color: const Color.fromRGBO(84, 110, 122, 1),
-        ),
-        Training(
-          training: 'Muay Thai Advanced',
-          time: '20:30 - 22:00',
-          color: const Color.fromRGBO(69, 90, 100, 1),
-        ),
-      ],
-    ),
-    DaysTrainings(
-      day: 'Friday',
-      listTrainings: [
-        Training(
-          training: 'Muay Thai',
-          time: '10:00 - 12:00',
-          color: const Color.fromRGBO(69, 90, 100, 1),
-        ),
-        Training(
-          training: 'Muay Thai',
-          time: '14:00 - 17:00',
-          color: const Color.fromRGBO(69, 90, 100, 1),
-        ),
-        Training(
-          training: 'Muay Thai Kids',
-          time: '18:00 - 19:30',
-          color: const Color.fromRGBO(120, 144, 156, 1),
-        ),
-        Training(
-          training: 'Muay Thai Beginners',
-          time: '19:30 - 20:30',
-          color: const Color.fromRGBO(84, 110, 122, 1),
-        ),
-        Training(
-          training: 'Muay Thai Advanced',
-          time: '20:30 - 22:00',
-          color: const Color.fromRGBO(69, 90, 100, 1),
-        ),
-      ],
-    ),
-    DaysTrainings(
-      day: 'Saturday',
-      listTrainings: [
-        Training(
-          training: 'Dynamic Fight Training',
-          time: '19:30 - 20:30',
-          color: const Color.fromRGBO(198, 40, 40, 1),
-        ),
-        Training(
-          training: '',
-          time: '',
-          color: null,
-        ),
-        Training(
-          training: 'Muay Thai',
+        Day(
+          day: 'saturday',
           time: '18:00 - 20:00',
           color: const Color.fromRGBO(69, 90, 100, 1),
         ),
-        Training(
-          training: '',
-          time: '',
-          color: null,
+      ],
+    ),
+    TypeTrainings(
+      type: 'Muay Thai Kids',
+      listTrainings: [
+        Day(
+          day: 'monday',
+          time: '-',
+          color: const Color.fromRGBO(120, 144, 156, 1),
         ),
-        Training(
-          training: '',
-          time: '',
-          color: null,
+        Day(
+          day: 'tuesday',
+          time: '18:00 - 19:30',
+          color: const Color.fromRGBO(120, 144, 156, 1),
+        ),
+        Day(
+          day: 'wednesday',
+          time: '-',
+          color: const Color.fromRGBO(120, 144, 156, 1),
+        ),
+        Day(
+          day: 'thursday',
+          time: '18:00 - 19:30',
+          color: const Color.fromRGBO(120, 144, 156, 1),
+        ),
+        Day(
+          day: 'friday',
+          time: '18:00 - 19:30',
+          color: const Color.fromRGBO(120, 144, 156, 1),
+        ),
+        Day(
+          day: 'saturday',
+          time: '-',
+          color: const Color.fromRGBO(120, 144, 156, 1),
+        ),
+      ],
+    ),
+    TypeTrainings(
+      type: 'Muay Thai Beginners',
+      listTrainings: [
+        Day(
+          day: 'monday',
+          time: '-',
+          color: const Color.fromRGBO(84, 110, 122, 1),
+        ),
+        Day(
+          day: 'tuesday',
+          time: '19:30 - 20:30',
+          color: const Color.fromRGBO(84, 110, 122, 1),
+        ),
+        Day(
+          day: 'wednesday',
+          time: '-',
+          color: const Color.fromRGBO(84, 110, 122, 1),
+        ),
+        Day(
+          day: 'thursday',
+          time: '19:30 - 20:30',
+          color: const Color.fromRGBO(84, 110, 122, 1),
+        ),
+        Day(
+          day: 'friday',
+          time: '19:30 - 20:30',
+          color: const Color.fromRGBO(84, 110, 122, 1),
+        ),
+        Day(
+          day: 'saturday',
+          time: '-',
+          color: const Color.fromRGBO(84, 110, 122, 1),
+        ),
+      ],
+    ),
+    TypeTrainings(
+      type: 'Muay Thai Advanced',
+      listTrainings: [
+        Day(
+          day: 'monday',
+          time: '-',
+          color: const Color.fromRGBO(69, 90, 100, 1),
+        ),
+        Day(
+          day: 'tuesday',
+          time: '20:30 - 22:00',
+          color: const Color.fromRGBO(69, 90, 100, 1),
+        ),
+        Day(
+          day: 'wednesday',
+          time: '-',
+          color: const Color.fromRGBO(69, 90, 100, 1),
+        ),
+        Day(
+          day: 'thursday',
+          time: '20:30 - 22:00',
+          color: const Color.fromRGBO(69, 90, 100, 1),
+        ),
+        Day(
+          day: 'friday',
+          time: '20:30 - 22:00',
+          color: const Color.fromRGBO(69, 90, 100, 1),
+        ),
+        Day(
+          day: 'saturday',
+          time: '-',
+          color: const Color.fromRGBO(69, 90, 100, 1),
+        ),
+      ],
+    ),
+    TypeTrainings(
+      type: 'Dynamic Fight Training',
+      listTrainings: [
+        Day(
+          day: 'monday',
+          time: '19:30 - 20:30',
+          color: const Color.fromRGBO(198, 40, 40, 1),
+        ),
+        Day(
+          day: 'tuesday',
+          time: '-',
+          color: const Color.fromRGBO(198, 40, 40, 1),
+        ),
+        Day(
+          day: 'wednesday',
+          time: '19:30 - 20:30',
+          color: const Color.fromRGBO(198, 40, 40, 1),
+        ),
+        Day(
+          day: 'thursday',
+          time: '-',
+          color: const Color.fromRGBO(198, 40, 40, 1),
+        ),
+        Day(
+          day: 'friday',
+          time: '-',
+          color: const Color.fromRGBO(198, 40, 40, 1),
+        ),
+        Day(
+          day: 'saturday',
+          time: '19:30 - 20:30',
+          color: const Color.fromRGBO(198, 40, 40, 1),
+        ),
+      ],
+    ),
+    TypeTrainings(
+      type: 'Fitness',
+      listTrainings: [
+        Day(
+          day: 'monday',
+          time: '18:30 - 20:00',
+          color: const Color.fromRGBO(0, 150, 136, 1),
+        ),
+        Day(
+          day: 'tuesday',
+          time: '-',
+          color: const Color.fromRGBO(0, 150, 136, 1),
+        ),
+        Day(
+          day: 'wednesday',
+          time: '18:30 - 20:00',
+          color: const Color.fromRGBO(0, 150, 136, 1),
+        ),
+        Day(
+          day: 'thursday',
+          time: '-',
+          color: const Color.fromRGBO(0, 150, 136, 1),
+        ),
+        Day(
+          day: 'friday',
+          time: '-',
+          color: const Color.fromRGBO(0, 150, 136, 1),
+        ),
+        Day(
+          day: 'saturday',
+          time: '-',
+          color: const Color.fromRGBO(0, 150, 136, 1),
         ),
       ],
     ),
@@ -191,91 +222,8 @@ class CamaraTrainingSchedule extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(
-          height: deviceSize!.height * 0.025,
-        ),
-        const Text(
-          'TRAININGS SCHEDULE',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-        ),
-        SizedBox(
-          height: deviceSize!.height * 0.025,
-        ),
-        Container(
-          height: 500,
-          child: ListView.builder(
-            itemCount: _contentOneTrainings.length,
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: index > 0
-                    ? const EdgeInsets.only(left: 1.0)
-                    : const EdgeInsets.only(left: 0.0),
-                child: Column(
-                  children: [
-                    Text(
-                      _contentOneTrainings[index].day!,
-                      style: const TextStyle(fontSize: 13),
-                    ),
-                    SizedBox(
-                      height: deviceSize!.height * 0.025,
-                    ),
-                    Container(
-                      width: 150,
-                      child: Column(
-                        children: _contentOneTrainings[index]
-                            .listTrainings!
-                            .map((Training training) {
-                          return Container(
-                            height: 80,
-                            width: double.infinity,
-                            padding: const EdgeInsets.all(10.0),
-                            margin: const EdgeInsets.only(bottom: 1.0),
-                            color: training.color ??
-                                const Color.fromRGBO(192, 192, 192, 1),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Container(
-                                  child: Text(
-                                    training.training!,
-                                    textAlign: TextAlign.center,
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText1!
-                                        .copyWith(
-                                          fontWeight: FontWeight.normal,
-                                          fontSize: deviceSize!.height * 0.02,
-                                        ),
-                                  ),
-                                ),
-                                Text(
-                                  training.time!,
-                                  textAlign: TextAlign.center,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .copyWith(
-                                        fontWeight: FontWeight.normal,
-                                        fontSize: deviceSize!.height * 0.02,
-                                      ),
-                                ),
-                              ],
-                            ),
-                          );
-                        }).toList(),
-                      ),
-                    ),
-                  ],
-                ),
-              );
-            },
-          ),
-        ),
-      ],
+    return TrainingSchedule(
+      contentTrainings: _contentOneTrainings,
     );
   }
 }

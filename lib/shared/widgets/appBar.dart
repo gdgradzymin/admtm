@@ -16,8 +16,7 @@ class ScreensAppBar extends StatefulWidget {
   _ScreensAppBarState createState() => _ScreensAppBarState();
 }
 
-class _ScreensAppBarState extends State<ScreensAppBar>
-    with SingleTickerProviderStateMixin {
+class _ScreensAppBarState extends State<ScreensAppBar> with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation _animation;
 
@@ -30,7 +29,7 @@ class _ScreensAppBarState extends State<ScreensAppBar>
       duration: const Duration(seconds: 2),
     );
 
-    _animation = Tween(begin: 125.0, end: 175.0).animate(_animationController)
+    _animation = Tween(begin: 125.0, end: 225.0).animate(_animationController)
       ..addListener(() {
         setState(() {});
       });
@@ -112,8 +111,7 @@ class _ScreensAppBarState extends State<ScreensAppBar>
                                   height: (_animation.value as double) / 10,
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 24.0),
+                                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
                                   child: Text(
                                     widget.appBarValue2,
                                     textAlign: TextAlign.center,
