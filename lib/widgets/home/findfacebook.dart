@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeFindFacebook extends StatelessWidget {
   final Size? deviceSize;
@@ -39,12 +40,10 @@ class HomeFindFacebook extends StatelessWidget {
             height: deviceSize!.height * 0.05,
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () => launch('https://pl-pl.facebook.com/muaythaimadeira/'),
             style: ButtonStyle(
-                shape: MaterialStateProperty.all<OutlinedBorder>(
-                    RoundedRectangleBorder(
-              side: const BorderSide(
-                  color: Colors.white, width: 2, style: BorderStyle.solid),
+                shape: MaterialStateProperty.all<OutlinedBorder>(RoundedRectangleBorder(
+              side: const BorderSide(color: Colors.white, width: 2, style: BorderStyle.solid),
               borderRadius: BorderRadius.circular(0),
             ))),
             child: Text(

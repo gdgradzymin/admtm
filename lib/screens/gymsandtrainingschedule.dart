@@ -11,8 +11,7 @@ class GymsAndTrainingSchedule extends StatefulWidget {
   static const routeName = '/GymsAndTrainingSchedule';
 
   @override
-  _GymsAndTrainingScheduleState createState() =>
-      _GymsAndTrainingScheduleState();
+  _GymsAndTrainingScheduleState createState() => _GymsAndTrainingScheduleState();
 }
 
 class _GymsAndTrainingScheduleState extends State<GymsAndTrainingSchedule> {
@@ -33,8 +32,7 @@ class _GymsAndTrainingScheduleState extends State<GymsAndTrainingSchedule> {
     if (_viewContent != _selectedContent) {
       // When user selected another content then is animation
       _visible = false;
-      Future<dynamic>.delayed(Duration(milliseconds: _timeAnimationContent))
-          .whenComplete(() {
+      Future<dynamic>.delayed(Duration(milliseconds: _timeAnimationContent)).whenComplete(() {
         setState(() {
           _viewContent = _selectedContent;
           _visible = true;
@@ -84,12 +82,9 @@ class _GymsAndTrainingScheduleState extends State<GymsAndTrainingSchedule> {
                   duration: Duration(milliseconds: _timeAnimationContent),
                   opacity: _visible ? 1 : 0,
                   curve: Curves.easeIn,
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: GymsAndTrainingContent(
-                      selectedContent: _viewContent,
-                      deviceSize: _deviceSize,
-                    ),
+                  child: GymsAndTrainingContent(
+                    selectedContent: _viewContent,
+                    deviceSize: _deviceSize,
                   ),
                 ),
                 Container(

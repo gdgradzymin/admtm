@@ -10,8 +10,7 @@ class HomeAppBar extends StatefulWidget {
   _HomeAppBarState createState() => _HomeAppBarState();
 }
 
-class _HomeAppBarState extends State<HomeAppBar>
-    with SingleTickerProviderStateMixin {
+class _HomeAppBarState extends State<HomeAppBar> with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation _animation;
 
@@ -24,7 +23,7 @@ class _HomeAppBarState extends State<HomeAppBar>
       duration: const Duration(seconds: 2),
     );
 
-    _animation = Tween(begin: 150.0, end: 200.0).animate(_animationController)
+    _animation = Tween(begin: 150.0, end: 300.0).animate(_animationController)
       ..addListener(() {
         setState(() {});
       });

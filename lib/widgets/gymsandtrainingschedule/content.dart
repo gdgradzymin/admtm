@@ -40,48 +40,55 @@ class GymsAndTrainingContent extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10.0),
-          child: CarouselSlider(
-            options: _carouselOptions,
-            items: contentOneImages.map((String image) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                    child: Image.asset(
-                      'images/gymsandtrainingschedule/$image.jpg',
-                    ),
-                  );
-                },
-              );
-            }).toList(),
-          ),
-        ),
-        SizedBox(
-          height: deviceSize!.height * 0.025,
-        ),
-        Container(
-          width: double.infinity,
-          child: Text(
-            'gymsandtrainingschedule_${selectedContent}_title',
-            textAlign: TextAlign.left,
-            style: Theme.of(ctx).textTheme.headline1,
-          ).tr(),
-        ),
-        ContentText(
-          value: 'gymsandtrainingschedule_${selectedContent}_value1',
-        ),
-        ContentText(
-          value: 'gymsandtrainingschedule_${selectedContent}_value2',
-        ),
-        ContentText(
-          value: 'gymsandtrainingschedule_${selectedContent}_value3',
-        ),
-        Container(
-          height: 150,
-          child: const Center(
-            child: Text('Map'),
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: CarouselSlider(
+                  options: _carouselOptions,
+                  items: contentOneImages.map((String image) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                          child: Image.asset(
+                            'images/gymsandtrainingschedule/$image.jpg',
+                          ),
+                        );
+                      },
+                    );
+                  }).toList(),
+                ),
+              ),
+              SizedBox(
+                height: deviceSize!.height * 0.025,
+              ),
+              Container(
+                width: double.infinity,
+                child: Text(
+                  'gymsandtrainingschedule_${selectedContent}_title',
+                  textAlign: TextAlign.left,
+                  style: Theme.of(ctx).textTheme.headline1,
+                ).tr(),
+              ),
+              ContentText(
+                value: 'gymsandtrainingschedule_${selectedContent}_value1',
+              ),
+              ContentText(
+                value: 'gymsandtrainingschedule_${selectedContent}_value2',
+              ),
+              ContentText(
+                value: 'gymsandtrainingschedule_${selectedContent}_value3',
+              ),
+              // Container(
+              //   height: 150,
+              //   child: const Center(
+              //     child: Text('Map'),
+              //   ),
+              // ),
+            ],
           ),
         ),
         CamaraTrainingSchedule(
@@ -95,45 +102,46 @@ class GymsAndTrainingContent extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10.0),
-          child: CarouselSlider(
-            options: _carouselOptions,
-            items: contentTwoImages.map((String image) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                    child: Image.asset(
-                      'images/gymsandtrainingschedule/$image.jpg',
-                    ),
-                  );
-                },
-              );
-            }).toList(),
-          ),
-        ),
-        SizedBox(
-          height: deviceSize!.height * 0.025,
-        ),
-        Container(
-          width: double.infinity,
-          child: Text(
-            'gymsandtrainingschedule_${selectedContent}_title',
-            textAlign: TextAlign.left,
-            style: Theme.of(ctx).textTheme.headline1,
-          ).tr(),
-        ),
-        ContentText(
-          value: 'gymsandtrainingschedule_${selectedContent}_value1',
-        ),
-        ContentText(
-          value: 'gymsandtrainingschedule_${selectedContent}_value2',
-        ),
-        Container(
-          height: 150,
-          child: const Center(
-            child: Text('Map'),
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: CarouselSlider(
+                  options: _carouselOptions,
+                  items: contentTwoImages.map((String image) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                          child: Image.asset(
+                            'images/gymsandtrainingschedule/$image.jpg',
+                          ),
+                        );
+                      },
+                    );
+                  }).toList(),
+                ),
+              ),
+              SizedBox(
+                height: deviceSize!.height * 0.025,
+              ),
+              Container(
+                width: double.infinity,
+                child: Text(
+                  'gymsandtrainingschedule_${selectedContent}_title',
+                  textAlign: TextAlign.left,
+                  style: Theme.of(ctx).textTheme.headline1,
+                ).tr(),
+              ),
+              ContentText(
+                value: 'gymsandtrainingschedule_${selectedContent}_value1',
+              ),
+              ContentText(
+                value: 'gymsandtrainingschedule_${selectedContent}_value2',
+              ),
+            ],
           ),
         ),
         FranciscoTrainingSchedule(
@@ -147,24 +155,25 @@ class GymsAndTrainingContent extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          width: double.infinity,
-          child: Text(
-            'gymsandtrainingschedule_${selectedContent}_title',
-            textAlign: TextAlign.left,
-            style: Theme.of(ctx).textTheme.headline1,
-          ).tr(),
-        ),
-        ContentText(
-          value: 'gymsandtrainingschedule_${selectedContent}_value1',
-        ),
-        ContentText(
-          value: 'gymsandtrainingschedule_${selectedContent}_value2',
-        ),
-        Container(
-          height: 150,
-          child: const Center(
-            child: Text('Map'),
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            children: [
+              Container(
+                width: double.infinity,
+                child: Text(
+                  'gymsandtrainingschedule_${selectedContent}_title',
+                  textAlign: TextAlign.left,
+                  style: Theme.of(ctx).textTheme.headline1,
+                ).tr(),
+              ),
+              ContentText(
+                value: 'gymsandtrainingschedule_${selectedContent}_value1',
+              ),
+              ContentText(
+                value: 'gymsandtrainingschedule_${selectedContent}_value2',
+              ),
+            ],
           ),
         ),
         GaroutaTrainingSchedule(
