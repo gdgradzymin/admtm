@@ -1,0 +1,513 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+<title>ADMTM - Ginásios e Horários</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="alternate" href="http://www.admtm.com/gyms-and-training-schedule.html" hreflang="en-gb" />
+<link rel="alternate" href="http://www.admtm.com/ginasios-e-horarios.html" hreflang="pt-pt" />
+<meta name="application-name" content="ADMTM.com" />
+<meta name="author" content="ADMTM" />
+<meta name="distributor" content="ADMTM" />
+<meta name="robots" content="All" />
+<meta name="description" content="Nós temos 3 ginásios na Madeira. Encontre-os aqui e verifique os horários de treino atualizados. Nós temos grupos distintos para melhor enquadrar-se ao seu nível." />
+<meta name="keywords" content="Muay Thai, Madeira, Ginásios, Horários, Funchal, Camara de Lobos, ADMTM, K-1, Kickboxing, Dynamic Fight Training, DFT, Fitness, Portugal" />
+<meta name="rating" content="General" />
+<meta name="dcterms.title" content="ADMTM - Ginásios e Horários" />
+<meta name="dcterms.contributor" content="ADMTM" />
+<meta name="dcterms.creator" content="Sebastian Denis DOT-COM" />
+<meta name="dcterms.publisher" content="ADMTM" />
+<meta name="dcterms.description" content="Nós temos 3 ginásios na Madeira. Encontre-os aqui e verifique os horários de treino atualizados. Nós temos grupos distintos para melhor enquadrar-se ao seu nível." />
+<meta name="dcterms.rights" content="ADMTM" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ADMTM - Ginásios e Horários" />
+<meta property="og:description" content="Nós temos 3 ginásios na Madeira. Encontre-os aqui e verifique os horários de treino atualizados. Nós temos grupos distintos para melhor enquadrar-se ao seu nível." />
+<meta property="twitter:title" content="ADMTM - Ginásios e Horários" />
+<meta property="twitter:description" content="Nós temos 3 ginásios na Madeira. Encontre-os aqui e verifique os horários de treino atualizados. Nós temos grupos distintos para melhor enquadrar-se ao seu nível." />
+<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/my.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+<style>
+#map {
+	width: 100%;
+	height: 500px;
+}
+#map2 {
+	width: 100%;
+	height: 500px;
+}
+#map3 {
+	width: 100%;
+	height: 500px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68960007-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+		var mapCanvas2 = document.getElementById('map2');
+		var mapCanvas3 = document.getElementById('map3');
+        var mapOptions = {
+          center: new google.maps.LatLng(32.6549063, -16.9717384), 
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.MAP
+        }
+		var mapOptions2 = {
+          center: new google.maps.LatLng(32.6520341,-16.9048969), 
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.MAP
+        }
+		var mapOptions3 = {
+          center: new google.maps.LatLng(32.662889,-16.9477424), 
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.MAP
+        }
+		
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+		var map2 = new google.maps.Map(mapCanvas2, mapOptions2);
+		var map3 = new google.maps.Map(mapCanvas3, mapOptions3);
+		
+		var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h4 id="firstHeading" class="firstHeading">ADMTM Ginásios</h4>'+
+      '<div id="bodyContent">'+
+	  '<p>Pavilhão Gimnodesportivo da Escola da Torre,<br /> 9300 Câmara de Lobos<br />' +
+	   'Phone: +351 966 373 544</p>'+
+      '</div>'+
+      '</div>';
+	  
+	  var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h4 id="firstHeading" class="firstHeading">ADMTM Ginásios</h4>'+
+      '<div id="bodyContent">'+
+	  '<p>Escola Francisco Franco,<br />Funchal<br />' +
+	   'Phone: +351 966 373 544</p>'+
+      '</div>'+
+      '</div>';
+	  
+	  var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h4 id="firstHeading" class="firstHeading">ADMTM Ginásios</h4>'+
+      '<div id="bodyContent">'+
+	  '<p>Santo António<br />' +
+	   'Phone: +351 966 373 544</p>'+
+      '</div>'+
+      '</div>';
+	  
+	
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+  var infowindow2 = new google.maps.InfoWindow({
+    content: contentString2
+  });
+   var infowindow3 = new google.maps.InfoWindow({
+    content: contentString3
+  });
+		
+		
+		var myMarker = new google.maps.Marker({
+position: new google.maps.LatLng(32.6549063, -16.9717384), // Lat/Long
+map: map, // references the map object you defined earlier
+title: 'ADMTM Gym' // a title that will appear on hover
+});
+
+var myMarker2 = new google.maps.Marker({
+position: new google.maps.LatLng(32.6520341,-16.9048969), // Lat/Long
+map: map2, // references the map object you defined earlier
+title: 'ADMTM Gym' // a title that will appear on hover
+});
+
+var myMarker3 = new google.maps.Marker({
+position: new google.maps.LatLng(32.662889,-16.9477424), // Lat/Long
+map: map3, // references the map object you defined earlier
+title: 'ADMTM Gym' // a title that will appear on hover
+});
+
+
+ myMarker.addListener('click', function() {
+    infowindow.open(map, myMarker);
+  });
+   myMarker2.addListener('click', function() {
+    infowindow2.open(map2, myMarker2);
+  });
+   myMarker3.addListener('click', function() {
+    infowindow3.open(map3, myMarker3);
+  });
+ 
+      }
+	  
+	
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+   
+</script>
+</head>
+<body>
+
+<!-- Page Wrapper -->
+<div id="page-wrapper"> 
+  
+  <!-- Header -->
+  <header id="header">
+    <h1><a href="index.html">ADMTM</a></h1>
+    <nav id="nav">
+      <ul><a href="ginasios-e-horarios.html" style="border: none;"><img src="img/portugal-flag.png" class="lang-flags" alt="Português" title="Português" /></a>
+      <a href="gyms-and-training-schedule.html" style="border: none;"><img src="img/uk-flag.png" class="lang-flags" alt="English" title="English"/></a>
+        <li class="special"> <a href="#menu" class="menuToggle"><span>Menu</span></a>
+          <div id="menu">
+            <ul>
+               <li><a href="index.html">Página Inicial</a></li>
+              <li><a href="sobre-nos.html">Sobre Nós</a></li>
+               <li><a href="aulas.html">Aulas</a></li>
+              <li><a href="o-que-e-o-muay-thai.html">O que é o Muay Thai</a></li>
+              <li><a href="a-nossa-equipa.html">A Nossa Equipa</a></li>
+              <li><a href="ginasios-e-horarios.html">Ginásios e Horários</a></li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li><a href="loja.html">Loja</a></li>
+               <li><a href="patrocinadores.html">Patrocinadores</a></li>
+              <span class="image fit mymenulogo" style="padding: 20px;max-height: 120px" > <img src="img/logo_admtm_white.png" alt="" style="opacity: 0.5;" /> </span>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Main -->
+  <article id="main">
+    <header>
+      <h2>Ginásios e Horários</h2>
+      <p>Venha conhecer os nossos centros de treino e horários</p>
+    </header>
+    <section class="wrapper style5">
+      <div class="inner">
+        <div > 
+          
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active" ><a href="#camaradelobos" aria-controls="camaradelobos" role="tab" data-toggle="tab">Ginásio de Câmara de Lobos</a></li>
+            <li role="presentation"><a href="#funchal" aria-controls="funchal" role="tab" data-toggle="tab">Ginásio Escola Francisco Franco (Funchal)</a></li>
+            <li role="presentation"><a href="#santoantonio" aria-controls="santoantonio" role="tab" data-toggle="tab">Ginásio Garouta do Calhau – Courelas Santo António</a></li>
+          </ul>
+          
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="camaradelobos">
+              <div class="row">
+                <div class="col-sm-5"> 
+                  
+                  <!-- carousel start -->
+                  
+                  <div id="carousel-cdelobos" class="carousel slide" data-ride="carousel" data-interval="2000" style="margin-top: 30px;"  > 
+                    <!-- Indicators --> 
+                    
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active"> <img src="img/gym001.jpg" alt="" class="img-responsive " > </div>
+                      <div class="item"> <img src="img/gym002.jpg" alt="" class="img-responsive " > </div>
+                      <div class="item"> <img src="img/gym003.jpg" alt="" class="img-responsive " > </div>
+                    </div>
+                  </div>
+                  
+                  <!-- carousel end --> 
+                  
+                </div>
+                <div class="col-sm-7">
+                  <h3 style="margin-top: 10px;">Ginásio de Câmara de Lobos</h3>
+                  <p>A cerca de dez minutos do Funchal, na segunda saída da via rápida de Câmara de Lobos em direção ao Hipermercado Continente, a dois minutos da saída da via rápida e com estacionamento gratuito e coberto.</p>
+                  <p>A sala de treino situa-se no Pavilhão Gimnodesportivo de Camara de Lobos, tem cerca de 120m2, totalmente em piso de tatami, ringue de treino, dez sacos de vários tamanhos, pesos e formatos. </p>
+                </div>
+                <div class="col-xs-12">
+                  <p>Para além do equipamento de Muay Thai (Pads) o ginásio está equipado com vários pesos de mãos, elásticos, cordas, bolas medicinais, entre muitos outros aparelhos essenciais para trabalhar força máxima, explosiva e dinâmica.</p>
+                  <p>Uma vez que esta é a sede do Clube, possui uma receção com pequena sala de espera, onde os pais podem deliciar-se a ver os treinos dos seus filhos.</p>
+                  <p>Às segundas e quartas-feiras poderá frequentar a pista de atletismo e sala de musculação (totalmente equipada com máquinas e pesos) permitindo assim um trabalho de hipertrofia muscular, para quem o desejar ou necessitar.</p>
+                </div>
+              </div>
+              <div id="map"></div>
+              <div id="cdelobosschedule" class="table-wrapper" style="margin-top: 60px;">
+                <h4>Horários</h4>
+                <table class="alt" style="margin-top: 30px; color: #ffffff;">
+                  <thead>
+                    <tr>
+                      <th style="text-align: center;">Segunda</th>
+                      <th style="text-align: center;">Terça</th>
+                      <th style="text-align: center;">Quarta</th>
+                      <th style="text-align: center;">Quinta</th>
+                      <th style="text-align: center;">Sexta</th>
+                      <th style="text-align: center;">Sábado</th>
+                    </tr>
+                  </thead>
+                  <tbody style="font-size: 0.9em;">
+                    <tr>
+                      <td style="text-align: center;background-color: #455A64;"><a href="aulas.html#muaythai" style="border: none;">Muay Thai</a><br />
+                        10:00 - 12:00</td>
+                      <td style="text-align: center;background-color: #ECEFF1;"></td>
+                      <td style="text-align: center;background-color: #455A64;"><a href="aulas.html#muaythai" style="border: none;">Muay Thai</a><br />
+                        10:00 - 12:00</td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #455A64;"><a href="aulas.html#muaythai" style="border: none;">Muay Thai</a><br />
+                        10:00 - 12:00</td>
+                      <td style="text-align: center;background-color: #C62828;"><a href="aulas.html#dft" style="border: none;">Dynamic Fight Training</a><br />
+                        10:30 - 12:00</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;background-color: #455A64;"><a href="aulas.html#muaythai" style="border: none;">Muay Thai</a><br />
+                        14:00 - 17:00</td>
+                      <td style="text-align: center;background-color: #ECEFF1;"></td>
+                      <td style="text-align: center;background-color: #455A64;"><a href="aulas.html#muaythai" style="border: none;">Muay Thai</a><br />
+                        14:00 - 17:00</td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #455A64;"><a href="aulas.html#muaythai" style="border: none;">Muay Thai</a><br />
+                        14:00 - 17:00</td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;background-color: #009688;"><a href="aulas.html#fitness" style="border: none;">Fitness</a><br />
+                        18:30 - 20:00</td>
+                      <td style="text-align: center;background-color: #78909C;"><a href="aulas.html#mtkids" style="border: none;">Muay Thai Crianças</a><br />
+                        18:30 - 19:30 </td>
+                      <td style="text-align: center;background-color: #009688;"><a href="aulas.html#fitness" style="border: none;">Fitness</a><br />
+                        18:30 - 20:00</td>
+                      <td style="text-align: center;background-color: #78909C;"><a href="aulas.html#mtkids" style="border: none;">Muay Thai Crianças</a><br />
+                        18:30 - 19:30 </td>
+                      <td style="text-align: center;background-color: #78909C;"><a href="aulas.html#mtkids" style="border: none;">Muay Thai Crianças</a><br />
+                        18:30 - 19:30 </td>
+                      <td style="text-align: center;background-color: #455A64;"><a href="aulas.html#muaythai" style="border: none;">Muay Thai</a><br />
+                        18:00 - 20:00 </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;background-color: #C62828;"><a href="aulas.html#dft" style="border: none;">Dynamic Fight Training</a><br />
+                        19:30 - 20:30</td>
+                      <td style="text-align: center;background-color: #546E7A;"><a href="aulas.html#mtbeginners" style="border: none;">Muay Thai Inciados</a><br />
+                        19:30 - 20:30 </td>
+                      <td style="text-align: center;background-color: #C62828;"><a href="aulas.html#dft" style="border: none;">Dynamic Fight Training</a><br />
+                        19:30 - 20:30</td>
+                      <td style="text-align: center;background-color: #546E7A;"><a href="aulas.html#mtbeginners" style="border: none;">Muay Thai Inciados</a><br />
+                        19:30 - 20:30 </td>
+                      <td style="text-align: center;background-color: #546E7A;"><a href="aulas.html#mtbeginners" style="border: none;">Muay Thai Inciados</a><br />
+                        19:30 - 20:30 </td>
+                      <td style="text-align: center;background-color: #ECEFF1;"></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;background-color: #ECEFF1;"></td>
+                      <td style="text-align: center;background-color: #37474F;"><a href="aulas.html#mtadvanced" style="border: none;">Muay Thai Avançados</a><br />
+                        20:30 - 22:00 </td>
+                      <td style="text-align: center;background-color: #ECEFF1;"></td>
+                      <td style="text-align: center;background-color: #37474F;"><a href="aulas.html#mtadvanced" style="border: none;">Muay Thai Avançados</a><br />
+                        20:30 - 22:00 </td>
+                      <td style="text-align: center;background-color: #37474F;"><a href="aulas.html#mtadvanced" style="border: none;">Muay Thai Avançados</a><br />
+                        20:30 - 22:00 </td>
+                      <td style="text-align: center;background-color: #ECEFF1;"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane " id="funchal">
+              <div class="row">
+                <div class="col-sm-5"> 
+                  <!-- carousel start -->
+                  
+                  <div id="carousel-funchal" class="carousel slide" data-ride="carousel" data-interval="2000" style="margin-top: 30px;"  > 
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="1" ></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="2" ></li>
+                      <!--  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active"> <img src="img/gym004.jpg" alt="" class="img-responsive " > </div>
+                      <div class="item"> <img src="img/gym005.jpg" alt="" class="img-responsive " > </div>
+                      <div class="item"> <img src="img/gym006.jpg" alt="" class="img-responsive " > </div>
+                    </div>
+                  </div>
+                  
+                  <!-- carousel end --> 
+                </div>
+                <div class="col-sm-7">
+                 
+                  <h3 style="margin-top: 10px;">Ginásio Escola Francisco Franco</h3>
+                   <p>
+                 Situa-se no interior da Escola Secundária Francisco Franco, Centro do Funchal, possibilidade de estacionamento coberto, com um custo de 20€ por ano.</p>
+<p>Sala com 60m2 de tatami e 80m2 de piso em madeira, balneários, possui 4 sacos, elásticos, pesos entre muitos outros aparelhos.</p>
+
+                </div>
+                <div class="col-xs-12">
+                <p>As terças e quintas, pode frequentar a sala de musculação, totalmente equipada com máquinas e pesos, permitindo assim um trabalho de hipertrofia muscular, para quem o desejar ou necessitar.</p>
+                </div>
+              </div>
+              <div id="map2" style="margin-top: 30px;"></div>
+              <div id="funchalschedule" class="table-wrapper" style="margin-top: 60px;">
+                <h4>Horários</h4>
+                <table class="alt" style="margin-top: 30px;color: #ffffff;">
+                  <thead>
+                    <tr>
+                      <th style="text-align: center;">Segunda</th>
+                      <th style="text-align: center;">Terça</th>
+                      <th style="text-align: center;">Quarta</th>
+                      <th style="text-align: center;">Quinta</th>
+                      <th style="text-align: center;">Sexta</th>
+                      <th style="text-align: center;">Sábado</th>
+                    </tr>
+                  </thead>
+                  <tbody style="font-size: 0.9em;">
+                    <tr>
+                      <td style="text-align: center;background-color: #78909C;"><a href="aulas.html#mtkids" style="border: none;">Muay Thai Crianças</a><br />
+                        18:45 - 19:30 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #78909C;"><a href="aulas.html#mtkids" style="border: none;">Muay Thai Crianças</a><br />
+                        18:45 - 19:30 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #78909C;"><a href="aulas.html#mtkids" style="border: none;">Muay Thai Crianças</a><br />
+                        18:45 - 19:30 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;background-color: #546E7A;"><a href="aulas.html#mtbeginners" style="border: none;">Muay Thai Inciados</a><br />
+                        19:30 - 20:30 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #546E7A;"><a href="aulas.html#mtbeginners" style="border: none;">Muay Thai Inciados</a><br />
+                        19:30 - 20:30 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #546E7A;"><a href="aulas.html#mtbeginners" style="border: none;">Muay Thai Inciados</a><br />
+                        19:30 - 20:30 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;background-color: #37474F;"><a href="aulas.html#mtadvanced" style="border: none;">Muay Thai Avançados</a><br />
+                        20:30 - 22:00 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #37474F;"><a href="aulas.html#mtadvanced" style="border: none;">Muay Thai Avançados</a><br />
+                        20:30 - 22:00 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #37474F;"><a href="aulas.html#mtadvanced" style="border: none;">Muay Thai Avançados</a><br />
+                        20:30 - 22:00 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="santoantonio">
+              
+              <h3 style="margin-top: 30px;">Ginásio Garouta do Calhau – Courelas Santo António</h3><p>
+   
+             Situa-se no Pico das Courelas, a dez minutos da via rápida, cinco minutos do Centro Comercial Madeira Shopping e a dois minutos da Igreja de Santo António.</p>
+<p>Possui uma área de 100m2, com balneários, 5 sacos de boxe, bolas elásticas, pesos, elásticos, entre outro equipamento.</p>
+
+             
+              <div id="map3"></div>
+              <div id="santoantoniochedule" class="table-wrapper" style="margin-top: 60px;">
+                <h4>Horários</h4>
+                <table class="alt" style="margin-top: 30px;color: #ffffff;">
+                  <thead>
+                    <tr>
+                  <th style="text-align: center;">Segunda</th>
+                      <th style="text-align: center;">Terça</th>
+                      <th style="text-align: center;">Quarta</th>
+                      <th style="text-align: center;">Quinta</th>
+                      <th style="text-align: center;">Sexta</th>
+                      <th style="text-align: center;">Sábado</th>
+                    </tr>
+                  </thead>
+                  <tbody style="font-size: 0.9em;">
+                    <tr>
+                      <td style="text-align: center;background-color: #78909C;"><a href="aulas.html#mtkids" style="border: none;">Muay Thai Crianças</a><br />
+                        18:30 - 19:30 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #78909C;"><a href="aulas.html#mtkids" style="border: none;">Muay Thai Crianças</a><br />
+                        18:30 - 19:30 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #455A64;"><a href="aulas.html#mt" style="border: none;">Muay Thai</a><br />
+                        18:00 - 19:00 </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;background-color: #546E7A;"><a href="aulas.html#mtbeginners" style="border: none;">Muay Thai Adultos</a><br />
+                        19:30 - 20:30 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #546E7A;"><a href="aulas.html#mtbeginners" style="border: none;">Muay Thai Adultos</a><br />
+                        19:30 - 20:30 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #C62828;"><a href="aulas.html#dft" style="border: none;">Dynamic Fight Training</a><br />
+                        19:30 - 20:30 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                    </tr>
+                      <tr>
+                      <td style="text-align: center;background-color: #37474F;"><a href="aulas.html#mtadvanced" style="border: none;">Muay Thai Avançados</a><br />
+                        20:30 - 22:00 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #37474F;"><a href="aulas.html#mtadvanced" style="border: none;">Muay Thai Avançados</a><br />
+                        20:30 - 22:00 </td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                      <td style="text-align: center;background-color: #F6F6F6;"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+  
+  <!-- Footer -->
+  <footer id="footer">
+    <ul class="icons">
+      <li><a href="https://www.facebook.com/ADMTM-Associa%C3%A7%C3%A3o-Desportiva-de-Muay-Thai-da-Madeira-264187056963615/timeline/" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+      <li><a href="https://www.youtube.com/user/2002admtm/videos" target="_blank" class="icon fa-youtube"><span class="label">Instagram</span></a></li>
+      <li><a href="mailto:admtm2002@hotmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+      <li style="color: rgba(255, 255, 255, 0.5);margin-left: 20px;"><span class="icon fa-phone" style="margin-right: 5px;"></span><font style="font-size: 0.9em;"> (+351) 966373544</font></li>
+    </ul>
+    <ul class="copyright">
+      <li>&copy; ADMTM | DESIGN: <a href="mailto:info@sebastiandenis.com" style="border: none;">SEBASTIAN DENIS DOT-COM</a></li>
+    </ul>
+  </footer>
+</div>
+
+<!-- Scripts --> 
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/jquery.scrollex.min.js"></script> 
+<script src="assets/js/jquery.scrolly.min.js"></script> 
+<script src="assets/js/skel.min.js"></script> 
+<script src="assets/js/util.js"></script> 
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]--> 
+<script src="assets/js/main.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+<script type="text/javascript">
+			  
+		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  initialize();
+})
+		</script>
+</body>
+</html>
