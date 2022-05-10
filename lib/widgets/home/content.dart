@@ -52,11 +52,11 @@ class HomeContent extends StatelessWidget {
                 buttonTranslate.tr().toUpperCase(),
                 style: Theme.of(context).textTheme.bodyText1,
               ),
-              onPressed: () => () => Navigator.pushNamedAndRemoveUntil(
-                    context,
-                    routeName,
-                    ModalRoute.withName('/'),
-                  ),
+              onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                context,
+                routeName,
+                ModalRoute.withName('/'),
+              ),
             ),
             shape: RoundedRectangleBorder(
               side: const BorderSide(
