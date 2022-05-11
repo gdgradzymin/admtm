@@ -1,4 +1,4 @@
-# ADMTM Madiera
+# ADMTM Madeira
 
 https://www.admtm.com
 
