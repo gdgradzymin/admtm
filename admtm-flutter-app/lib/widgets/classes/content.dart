@@ -36,9 +36,9 @@ class ClassesContent extends StatelessWidget {
   final contentThreeImages = <String>[
     'mtadvX99aad',
     'mtadvX7acdd',
-    'mtadv753op',
+    'admtm_thailand',
     'mtadvX66a6a',
-    'mtadv223aj',
+    'admtm_202208',
   ];
 
   Widget oneContent(BuildContext ctx) {

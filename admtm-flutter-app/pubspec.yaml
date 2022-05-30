@@ -52,14 +52,15 @@ flutter:
   assets:
     - lang/
 
+    - images/admtm_team_2022.jpg
+    - images/admtm_202207.jpg
+    - images/admtm_202201.jpg
+    - images/admtm_thailand.jpg
     - images/admtm001.jpg
     - images/background_dragons.png
     - images/logo_admtm_white.png
     - images/fpkmt_logo_small.png
     - images/logo_admtm2.jpg
-    - images/aboutus_xlaozc3la0.jpg
-    - images/admtm_xk35euui0a.jpg
-    - images/admtm_x234dizoop.jpg
     - images/admtm_team02v2.jpg
     - images/cm-funchal.png
     - images/cm-cdlobos.png
@@ -73,6 +74,8 @@ flutter:
     - images/escola01.jpg
     - images/escola02.jpg
     - images/dft_logo_small.png
+    - images/classes/admtm_thailand.jpg
+    - images/classes/admtm_202208.jpg
     - images/classes/mtkidsXace0z.jpg
     - images/classes/mtkidsXdfa8a.jpg
     - images/classes/mtkidsX7bbah.jpg
@@ -98,6 +101,16 @@ flutter:
     - images/classes/mtadv223aj.jpg
     - images/whatismt/whatismt01.jpg
     - images/whatismt/whatismt02.jpg
+    - images/fightteam/admtm_team_2022_ring.jpg
+    - images/fightteam/coach-abreu.png
+    - images/fightteam/coach-marisol.png
+    - images/fightteam/coach-joao.png
+    - images/fightteam/admtm_202202.jpg
+    - images/fightteam/admtm_202203.jpg
+    - images/fightteam/admtm_xk35euui0a.jpg
+    - images/fightteam/admtm_x234dizoop.jpg
+    - images/fightteam/admtm_202206b.jpg
+    - images/fightteam/admtm_202204.jpg
     - images/fightteam/admtm_team01.jpg
     - images/fightteam/jose_abreu.jpg
     - images/fightteam/marisol_freitas.jpg

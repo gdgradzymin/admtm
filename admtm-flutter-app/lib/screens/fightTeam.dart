@@ -87,7 +87,7 @@ class FightTeam extends StatelessWidget {
                       SizedBox(
                         height: _deviceSize.height * 0.025,
                       ),
-                      Image.asset('images/fightteam/admtm_team01.jpg'),
+                      Image.asset('images/fightteam/admtm_team_2022_ring.jpg'),
                       SizedBox(
                         height: _deviceSize.height * 0.025,
                       ),
@@ -124,40 +124,21 @@ class FightTeam extends StatelessWidget {
                 ),
                 _fighter(
                   context: context,
-                  image: 'images/fightteam/jose_abreu.jpg',
+                  image: 'images/fightteam/coach-abreu.png',
                   numberFighter: 1,
                 ),
                 _fighter(
                   context: context,
-                  image: 'images/fightteam/marisol_freitas.jpg',
+                  image: 'images/fightteam/coach-marisol.png',
                   numberFighter: 2,
                 ),
                 _fighter(
                   context: context,
-                  image: 'images/fightteam/henrique_ponte.jpg',
+                  image: 'images/fightteam/coach-joao.png',
                   numberFighter: 3,
-                ),
-                _fighter(
-                  context: context,
-                  image: 'images/fightteam/antonio_faria.jpg',
-                  numberFighter: 4,
-                ),
-                _fighter(
-                  context: context,
-                  image: 'images/fightteam/fabio_pinto.jpg',
-                  numberFighter: 5,
-                ),
-                _fighter(
-                  context: context,
-                  image: 'images/fightteam/marco_jardim.jpg',
-                  numberFighter: 6,
                 ),
                 SizedBox(
                   height: _deviceSize.height * 0.025,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Image.asset('images/fightteam/admtm_trainers.jpg'),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(
@@ -194,11 +175,6 @@ class FightTeam extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child:
-                            Image.asset('images/fightteam/admtm_team02v2.jpg'),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
                         child: Image.asset(
                             'images/fightteam/admtm_ft_xekmaicpo3.jpg'),
                       ),
@@ -209,8 +185,30 @@ class FightTeam extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
+                        child: Image.asset('images/fightteam/admtm_202202.jpg'),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset('images/fightteam/admtm_202203.jpg'),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
                         child: Image.asset(
-                            'images/fightteam/admtm_ft_x43laizzoa.jpg'),
+                            'images/fightteam/admtm_xk35euui0a.jpg'),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset(
+                            'images/fightteam/admtm_x234dizoop.jpg'),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child:
+                            Image.asset('images/fightteam/admtm_202206b.jpg'),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset('images/fightteam/admtm_202204.jpg'),
                       ),
                     ],
                   ),
