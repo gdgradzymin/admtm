@@ -134,7 +134,7 @@ class FightTeam extends StatelessWidget {
                 ),
                 _fighter(
                   context: context,
-                  image: 'images/fightteam/coach-joao.png',
+                  image: 'images/fightteam/cleandro.png',
                   numberFighter: 3,
                 ),
                 SizedBox(
