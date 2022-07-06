@@ -1,3 +1,4 @@
+import 'package:admtm_app/screens/about.dart';
 import 'package:admtm_app/screens/aboutUs.dart';
 import 'package:admtm_app/screens/classes.dart';
 import 'package:admtm_app/screens/fightTeam.dart';
@@ -67,6 +68,7 @@ class MyApp extends StatelessWidget {
         '/News': (context) => News(),
         '/Shop': (context) => Shop(),
         '/Sponsors': (context) => Sponsors(),
+        '/About': (context) => About(),
       },
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,

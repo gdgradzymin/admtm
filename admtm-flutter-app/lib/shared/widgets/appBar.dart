@@ -5,11 +5,13 @@ class ScreensAppBar extends StatefulWidget {
   final String appBarValue1;
   final String appBarValue2;
   final Size deviceSize;
+  final double maxHeight;
 
   const ScreensAppBar({
     required this.appBarValue1,
     this.appBarValue2 = '',
     required this.deviceSize,
+    this.maxHeight = 225.0,
   });
 
   @override
@@ -29,7 +31,7 @@ class _ScreensAppBarState extends State<ScreensAppBar> with SingleTickerProvider
       duration: const Duration(seconds: 2),
     );
 
-    _animation = Tween(begin: 125.0, end: 225.0).animate(_animationController)
+    _animation = Tween(begin: 125.0, end: widget.maxHeight).animate(_animationController)
       ..addListener(() {
         setState(() {});
       });
