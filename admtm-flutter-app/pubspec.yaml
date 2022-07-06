@@ -198,6 +198,9 @@ flutter:
     - images/sponsors/logo_snack_bar.jpg
     - images/sponsors/logo_super_lobos.jpg
     - images/sponsors/logo_tipografia_natividade.jpg
+    - images/authors/danielmichalak.jpg
+    - images/authors/sebastiandenis.jpg
+    - images/github.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
